@@ -105,5 +105,8 @@ Instrucciones para el asistente:
 ## 7. Casos de uso
 
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
-Se deben seguir los pasos del numeral 5.1.1 para crear la colección "Transito" utilizando el archivo "ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf" que puede descargar de
+Se deben seguir los pasos del numeral 5.1.1 para crear la colección "Transito" utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
+
+![image](https://github.com/user-attachments/assets/4e272c37-4189-4cad-845c-392aad6b3543)
+
 
