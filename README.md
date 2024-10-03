@@ -6,6 +6,8 @@ Es una aplicación de escritorio creada por NomicAI que permite descargar y ejec
 
 ![image](https://github.com/user-attachments/assets/5b6f61d1-131b-4082-b313-4535feae1975)
 
+Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
+
 ## 2 Ventajas
 - No requiere acceso a internet 
 - No requiere GPU 
@@ -20,21 +22,23 @@ Es una aplicación de escritorio creada por NomicAI que permite descargar y ejec
 ## 4 Requerimientos
 - Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5.  
 - Tener instalado GPT4All Link descarga 
-- Descargar modelos “Llama 3 8B Instruct” y “Phi-3 Mini Instruct”
+- Descargar modelos `Llama 3 8B Instruct` y `Phi-3 Mini Instruct`
 
 ## 5 Configurar GPT4ALL
 
 ## 5.1 Descargar modelos
-En el panel de la izquierda, clic en "Modelos", luego clic en "+Agregar Modelos"
+En el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelos`
+
 ![image](https://github.com/user-attachments/assets/eca50b73-2b14-4d69-b736-9bc2f6e6731e)
-Buscar el modelo en la lista y dar clic en "Instalar". La descarga puede tardar varias horas dependiendo del tamaño
+
+**Buscar el modelo en la lista y dar clic en `Instalar`. La descarga puede tardar varias horas dependiendo del tamaño**
 
 ## 5.1 Doc Locales (localdocs)
-Por lo general, los LLM se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los LLM captar y utilizar la información de forma más contextual y precisa.
+Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los LLM captar y utilizar la información de forma más contextual y precisa.
 
-«Doc Locales» es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. Esto garantiza la privacidad de los datos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
+`Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. Esto garantiza la privacidad de los datos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
 
-Doc Locales permite crear "Colecciones". Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
+Doc Locales permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
 
 **Recomendaciones**
 - No guardar archivos de diferentes temas o areas en la misma carpeta. Por organización se debe crear un carpeta por área de búsqueda
@@ -44,11 +48,11 @@ Doc Locales permite crear "Colecciones". Cada Colección tiene un nombre y la ru
 ### 5.1.1 Crear una Colección
 En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en esta carpeta los documentos a consultar. Se recomienda crear una carpeta para cada categoría
 
-a. Clic en “Docs Locales”
+a. Clic en `Docs Locales`
 
 ![image](https://github.com/user-attachments/assets/de0f2cd1-ae0f-4c4b-9d08-dea637261cc2)
 
-b. Clic en “+Agregar colección”
+b. Clic en `+Agregar colección`
 
 ![image](https://github.com/user-attachments/assets/8a3a34ec-cf85-46a0-9361-de380a14452a)
 
@@ -56,7 +60,7 @@ c. Escribir nombre y seleccionar carpeta
 
 ![image](https://github.com/user-attachments/assets/8f1d3a3b-721b-4352-8c99-337d58ba4d36)
 
-c. Clic en "Crear Colección"
+c. Clic en `Crear Colección`
 
 **GPT4LL empieza a indexar los documentos en la carpeta seleccionada**
 ![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
@@ -68,7 +72,7 @@ A partir del momento que se crea una colección, GPT4ALL monitorea la carpeta. S
 ## 6. Configuración del modelo
 Para obtener los mejores resultados debemos configurar dos propiedades del modelo que se usará para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada de que parte del documento se utilizó para responder la pregunta. 
 
-En el panel de la izquierda clic en "Config" luego clic en "Modelo"
+En el panel de la izquierda clic en `Config` luego clic en `Modelo`
 ![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
 
 En la propiedad "Indicación del sistema" borrar el contenido y agregar el siguiente texto:
@@ -102,4 +106,29 @@ Instrucciones para el asistente:
 %2<|eot_id|>
 ```
 
+## 7. Casos de uso
+
+## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
+Se deben seguir los pasos del numeral `5.1.1` para crear la colección "Transito" utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
+Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5557)
+
+**En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+Nuevo Chat`**
+![image](https://github.com/user-attachments/assets/4e272c37-4189-4cad-845c-392aad6b3543)
+
+
+**Ahora seleccionar el modelo `Llama 3 8B instruct` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`**
+
+![image](https://github.com/user-attachments/assets/1959e3cc-5ada-4c6f-a6e5-b9551ddf102a)
+
+**En la parte inferior, en el cuadro que dice `Enviar un mensaje` escribir la siguiente pregunta:**
+![image](https://github.com/user-attachments/assets/016da59b-2b38-4855-ab2a-68962e3c687d)
+
+```
+Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
+```
+
+**Presionar enter, lo cual inicia el proceso de buscar en DocumentosLocales para responder**
+![image](https://github.com/user-attachments/assets/26a8d9bd-c8b6-4e99-85f5-3ae4caf885c1)
+
+## 7.2 Asesor de finanzas personales
 
