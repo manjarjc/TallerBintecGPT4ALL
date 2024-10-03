@@ -1,0 +1,119 @@
+
+Buenas Prácticas para la Creación de Procedimientos Almacenados en PostgreSQL
+
+1. Organización y Estructura del Código
+   - Nombres descriptivos:
+     - Usa nombres claros y representativos para procedimientos y parámetros.
+     - Ejemplo: 
+       CREATE PROCEDURE update_order_status(order_id INT, new_status VARCHAR)
+       BEGIN
+         -- Lógica aquí
+       END;
+
+   - Comentarios claros:
+     - Documenta la lógica del procedimiento.
+     - Ejemplo:
+       -- Actualiza el estado de un pedido específico
+
+2. Seguridad y Control de Acceso
+   - Uso de SECURITY DEFINER:
+     - Limita los privilegios y utiliza SECURITY DEFINER solo si es necesario.
+     - Ejemplo:
+       CREATE PROCEDURE sensitive_procedure()
+       SECURITY DEFINER
+       BEGIN
+         -- Lógica sensible
+       END;
+
+   - Validación de parámetros:
+     - Valida las entradas para evitar ataques de inyección SQL.
+     - Ejemplo:
+       CREATE PROCEDURE validate_input(id INT)
+       BEGIN
+         IF id IS NULL THEN
+           RAISE EXCEPTION 'El ID no puede ser NULL';
+         END IF;
+       END;
+
+3. Eficiencia y Rendimiento
+   - Evita SELECT *:
+     - Selecciona solo las columnas necesarias.
+     - Ejemplo:
+       SELECT nombre, apellido FROM usuarios WHERE id = input_id;
+
+   - Uso efectivo de índices:
+     - Verifica los índices adecuados antes de crear procedimientos que interactúen con grandes conjuntos de datos.
+   - Operaciones por lotes:
+     - Utiliza operaciones en conjunto en vez de por fila.
+     - Ejemplo:
+       INSERT INTO inventario (producto_id, cantidad) 
+       SELECT producto_id, SUM(cantidad) FROM ventas GROUP BY producto_id;
+
+4. Manejo de Errores
+   - Uso de bloques EXCEPTION:
+     - Implementa manejo de excepciones para capturar errores.
+     - Ejemplo:
+       CREATE PROCEDURE handle_error_example()
+       BEGIN
+         BEGIN
+           -- Operación que puede fallar
+         EXCEPTION WHEN OTHERS THEN
+           RAISE NOTICE 'Ocurrió un error';
+         END;
+       END;
+
+5. Mantenimiento y Evolución
+   - Versionado de procedimientos:
+     - Usa nombres versionados para manejar cambios.
+     - Ejemplo:
+       CREATE PROCEDURE calculate_tax_v1()
+       CREATE PROCEDURE calculate_tax_v2()
+
+6. Optimización del Uso de Transacciones
+   - Control de transacciones:
+     - Mantén las transacciones cortas y claras.
+     - Ejemplo:
+       BEGIN;
+       UPDATE cuentas SET balance = balance - 100 WHERE id = 1;
+       COMMIT;
+
+   - Manejo de bloqueos:
+     - Evita bloqueos prolongados usando niveles de aislamiento adecuados.
+     - Ejemplo:
+       SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+7. Uso Eficiente de Tipos de Datos
+   - Selección de tipos adecuados:
+     - Utiliza tipos de datos que optimicen espacio y rendimiento.
+     - Ejemplo:
+       CREATE PROCEDURE set_user_age(user_id INT, user_age SMALLINT)
+
+8. Modularidad y Reutilización
+   - Encapsulación de lógica repetida:
+     - Separa lógica común en funciones reutilizables.
+     - Ejemplo:
+       CREATE FUNCTION calcular_iva(precio DECIMAL) RETURNS DECIMAL AS $$
+       BEGIN
+         RETURN precio * 0.16;
+       END;
+       $$ LANGUAGE plpgsql;
+
+Formato para uso en Prompts:
+
+1. Nombre del procedimiento: create_procedure
+   - Descripción: Crea un procedimiento almacenado en PostgreSQL.
+   - Ejemplo:
+     CREATE PROCEDURE procedure_name(param1 TYPE, param2 TYPE)
+     LANGUAGE plpgsql
+     AS $$
+     BEGIN
+       -- Código aquí
+     END;
+     $$;
+
+2. Validación de parámetros: validate_input
+   - Descripción: Valida los parámetros de entrada de un procedimiento.
+   - Ejemplo:
+     IF input IS NULL THEN
+       RAISE EXCEPTION 'El parámetro no puede ser NULL';
+     END IF;
