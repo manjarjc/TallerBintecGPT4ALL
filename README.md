@@ -20,27 +20,27 @@ Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https
 
 ## 4 Requerimientos
 - Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5.  
-- Tener instalado GPT4All Link descarga 
+- Tener instalado GPT4All 
 - Descargar modelos `Llama 3 8B Instruct` y `TheBloke/CodeLlama-7B-Instruct-GGUF`
 
 ## 5 Configurar GPT4ALL
 
 ## 5.1 Descargar modelos
-En el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelos`
+En el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelo`
 
 ![image](https://github.com/user-attachments/assets/eca50b73-2b14-4d69-b736-9bc2f6e6731e)
 
 **Buscar el modelo en la lista y dar clic en `Instalar`. La descarga puede tardar varias horas dependiendo del tamaño**
 
 ## 5.1 Doc Locales (localdocs)
-Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los LLM captar y utilizar la información de forma más contextual y precisa.
+Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los modelos captar y utilizar la información de forma más contextual y precisa.
 
 `Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. Esto garantiza la privacidad de los datos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
 
 Doc Locales permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
 
 **Recomendaciones**
-- No guardar archivos de diferentes temas o areas en la misma carpeta. Por organización se debe crear un carpeta por área de búsqueda
+- No guardar archivos de diferentes temas o areas en la misma carpeta. Por organización se debe crear una carpeta por área de búsqueda
 - Solo guardar en la carpeta los documentos relevantes. Mas documentos implica un aumento de tamaño en la base de datos vectorial que ralentizará las respuestas. Aquí es más importante la calidad que la cantidad
 - Por defecto solo se indexarán archivos con extensiones **txt,pdf,md,rst**
 
@@ -68,12 +68,12 @@ c. Clic en `Crear Colección`
 ![image](https://github.com/user-attachments/assets/9718b670-0359-48d0-aca3-81eb90fdf844)
 
 ## 6. Configuración del modelo
-Para obtener los mejores resultados debemos configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
+Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
 
 En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo`
 ![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
 
-Buscar la propiedad `Indicación del sistema` y borrar el contenido y agregar el siguiente texto:
+Buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
 ```
 ### System:
 Eres un asistente AI especializado en proporcionar información basada únicamente en documentos locales (localdocs). Tu tarea es responder preguntas y realizar análisis utilizando exclusivamente la información contenida en estos documentos. No debes utilizar ningún conocimiento externo o información que no esté presente en los localdocs.
@@ -293,7 +293,7 @@ Respuesta:
 %2
 ```
 
-Ahora vamos a crear un nuevo chat para el que debemos seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF` e ingresar el siguiente código de un procedimiento almacenado para PostgreSQL en `Enviar un mensaje...`:
+Ahora crear un nuevo chat y seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`. Ingresar el siguiente código de ejemplo de un procedimiento almacenado para PostgreSQL en `Enviar un mensaje...`:
 
 ```
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
