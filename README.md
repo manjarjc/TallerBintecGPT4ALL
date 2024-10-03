@@ -3,7 +3,7 @@
 ## 1. GPT4ALL
 Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop
 
-![image](https://github.com/user-attachments/assets/5b6f61d1-131b-4082-b313-4535feae1975)
+![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
 Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
 
@@ -154,15 +154,15 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 ## 7.3 Generación de código: validar cumplimiento de lineamientos
 
-Este es un caso que no involucra Documentos Locales; debemos proporcionar unos lineamientos que se deben cumplir al desarrollar código SQL para PostgreSQL. Para lograrlo, debemos configurar dos propiedades del modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`: `Indicación del sistema` y `Plantilla de indicación`
+Este es un caso que no involucra Documentos Locales; debemos proporcionar unos lineamientos que se deben cumplir al desarrollar código para PostgreSQL. Para lograrlo, debemos configurar dos propiedades del modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`: `Indicación del sistema` y `Plantilla de indicación`
 
-Buscar la propiedad `Indicación del sistema` y borrar el contenido y agregar el siguiente texto:
+Buscar la propiedad `Indicación del sistema`; borrar el contenido y agregar el siguiente texto:
 ```
 ### System:
 Eres un asistente AI especializado en verificar el cumplimiento de lineamientos en el código SQL para PostgreSQL.
 ```
 
-Ahora buscar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
+Ahora buscar la propiedad `Plantilla de indicación`; borrar el contenido y agregar lo siguiente:
 ```
 ### Human:
 
@@ -293,7 +293,7 @@ Respuesta:
 %2
 ```
 
-Ahora vamos a crear un nuevo chat donde vamos a seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF` e ingresar el siguiente código SQL PostgreSQL:
+Ahora vamos a crear un nuevo chat para el que debemos seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF` e ingresar el siguiente código de un procedimiento almacenado para PostgreSQL en `Enviar un mensaje...`:
 
 ```
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
