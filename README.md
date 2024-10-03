@@ -52,30 +52,29 @@ a. Clic en `Docs Locales`
 
 ![image](https://github.com/user-attachments/assets/de0f2cd1-ae0f-4c4b-9d08-dea637261cc2)
 
-b. Clic en `+Agregar colección`
-
-![image](https://github.com/user-attachments/assets/8a3a34ec-cf85-46a0-9361-de380a14452a)
-
-c. Escribir nombre y seleccionar carpeta
+b. Clic en `+Agregar colección`. Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta
 
 ![image](https://github.com/user-attachments/assets/8f1d3a3b-721b-4352-8c99-337d58ba4d36)
 
 c. Clic en `Crear Colección`
 
+![image](https://github.com/user-attachments/assets/8a3a34ec-cf85-46a0-9361-de380a14452a)
+
+
 **GPT4LL empieza a indexar los documentos en la carpeta seleccionada**
 ![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
 
-A partir del momento que se crea una colección, GPT4ALL monitorea la carpeta. Si se eliminan o agregan documentos de la carpeta asociada a la colección ésta se actualiza automáticamente
+## A partir del momento que se crea una colección, GPT4ALL monitorea la carpeta. Si se eliminan o agregan documentos de la carpeta asociada a la colección ésta se actualiza automáticamente
 
 ![image](https://github.com/user-attachments/assets/9718b670-0359-48d0-aca3-81eb90fdf844)
 
 ## 6. Configuración del modelo
-Para obtener los mejores resultados debemos configurar dos propiedades del modelo que se usará para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada de que parte del documento se utilizó para responder la pregunta. 
+Para obtener los mejores resultados debemos configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
 
-En el panel de la izquierda clic en `Config` luego clic en `Modelo`
+En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo`
 ![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
 
-En la propiedad "Indicación del sistema" borrar el contenido y agregar el siguiente texto:
+Buscar la propiedad `Indicación del sistema` y borrar el contenido y agregar el siguiente texto:
 ```
 ### System:
 Eres un asistente AI especializado en proporcionar información basada únicamente en documentos locales (localdocs). Tu tarea es responder preguntas y realizar análisis utilizando exclusivamente la información contenida en estos documentos. No debes utilizar ningún conocimiento externo o información que no esté presente en los localdocs.
@@ -91,7 +90,7 @@ Instrucciones:
 Recuerda: Tu conocimiento se limita estrictamente a lo que está contenido en los documentos locales. No utilices información externa bajo ninguna circunstancia.
 ```
 
-En "Plantilla de indicación" borrar el contenido y agregar lo siguiente:
+Ahora bucar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
 ```
 <|start_header_id|>user<|end_header_id|>
 Consulta: %1
