@@ -130,5 +130,46 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 **Presionar enter, lo cual inicia el proceso de buscar en DocumentosLocales para responder**
 ![image](https://github.com/user-attachments/assets/26a8d9bd-c8b6-4e99-85f5-3ae4caf885c1)
 
+**La respuesta puede variar pero siempre debe mencionar que partes del documento se consultaron**
+![image](https://github.com/user-attachments/assets/0d6c3a6a-b5b2-4615-8283-84613422db02)
+
+**Hacer las siguientes preguntas y verificar las fuentes consultadas:**
+```
+﻿En qué circunstancias puede un guardia de tránsito inmovilizar mi vehículo?
+```
+```
+Qué pasos debe seguir un conductor para reportar un accidente y levantar un croquis del incidente de tránsito?
+```
+```
+Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por las autoridades de tránsito?
+```
+
 ## 7.2 Asesor de finanzas personales
+Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
+
+Hacer la siguiente pregunta:
+```
+De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
+```
+
+![image](https://github.com/user-attachments/assets/ca42a4fe-be9c-4899-96d3-341c6ca40793)
+
+## 6.3 Generación de código cumpliendo lineamientos
+
+```
+Necesito un procedimiento almacenado para borrar registros de dos tablas de una base de datos de PostgreSQL que realice las siguientes tareas:
+1. Definir un parametro de entrada "max_records" que permita establecer la cantidad maxima de registros a eliminar de las dos tablas
+2. Recuperar de la tabla "TRANSACTION_INFORMATION" los registros donde el valor del campo "date" tenga más de 90 días. Devolver el campo "ID"
+3. Si no se devuelven registros en el punto 2 terminar el procedimiento
+4. Iniciar una transaccion antes de iniciar el bucle
+5. Iterar sobre cada uno de los registros devueltos en el punto 2
+6. Eliminar los registros de la tabla "EVENT_TRANSACTION" donde el campo "FK_TRANSACTION_ID" sea igual al campo "ID" del punto 2 y guardar la cantidad de registros eliminados en la variable "deleted_event"
+7. Eliminar el registro de la tabla "TRANSACTION_INFORMATION" donde el valor del campo "ID" que sea igual al campo "ID" del punto 2  y guardar la cantidad de registros eliminados en la variable "deleted_tran"
+8. En cada ciclo, actualizar la variable "total_records_deleted", sumando al valor actual el valor de las variables "deleted_event" y "deleted_tran"
+9. En cada ciclo se debe verificar si el valor de la variable "total_records_deleted" es mayor o igual al parametro de entrada "max_records". Si se cumple la condición finalizar el procedimiento
+10. Confirmar la transacción iniciada en el punto 4
+11. Devolver el valor de la variable "total_records_deleted"
+12. Implementar un control de errores que haga un rollback de transacciones pendientes
+```
+
 
