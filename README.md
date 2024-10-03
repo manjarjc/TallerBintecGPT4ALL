@@ -1,8 +1,8 @@
-# TallerBintecGPT4ALL
+![image](https://github.com/user-attachments/assets/b6d88185-1c6a-4b31-8249-8c24d7ec6d78)# TallerBintecGPT4ALL
 Esta es la guía para el evento Bintec de Bancolombia 2024
 
 ## 1. GPT4ALL
-Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop https://docs.gpt4all.io/index.html
+Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop
 
 ![image](https://github.com/user-attachments/assets/5b6f61d1-131b-4082-b313-4535feae1975)
 
@@ -22,7 +22,7 @@ Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https
 ## 4 Requerimientos
 - Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5.  
 - Tener instalado GPT4All Link descarga 
-- Descargar modelos `Llama 3 8B Instruct` y `Phi-3 Mini Instruct`
+- Descargar modelos `Llama 3 8B Instruct` y `TheBloke/CodeLlama-7B-Instruct-GGUF`
 
 ## 5 Configurar GPT4ALL
 
@@ -90,7 +90,7 @@ Instrucciones:
 Recuerda: Tu conocimiento se limita estrictamente a lo que está contenido en los documentos locales. No utilices información externa bajo ninguna circunstancia.
 ```
 
-Ahora bucar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
+Ahora buscar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
 ```
 <|start_header_id|>user<|end_header_id|>
 Consulta: %1
@@ -153,22 +153,146 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 ![image](https://github.com/user-attachments/assets/ca42a4fe-be9c-4899-96d3-341c6ca40793)
 
-## 6.3 Generación de código cumpliendo lineamientos
+## 7.3 Generación de código: validar cumplimiento de lineamientos
 
+Este es un caso que no involucra Documentos Locales; debemos proporcionar unos lineamientos que se deben cumplir al desarrollar código SQL para PostgreSQL. Para lograrlo, debemos configurar dos propiedades del modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`: `Indicación del sistema` y `Plantilla de indicación`
+
+Buscar la propiedad `Indicación del sistema` y borrar el contenido y agregar el siguiente texto:
 ```
-Necesito un procedimiento almacenado para borrar registros de dos tablas de una base de datos de PostgreSQL que realice las siguientes tareas:
-1. Definir un parametro de entrada "max_records" que permita establecer la cantidad maxima de registros a eliminar de las dos tablas
-2. Recuperar de la tabla "TRANSACTION_INFORMATION" los registros donde el valor del campo "date" tenga más de 90 días. Devolver el campo "ID"
-3. Si no se devuelven registros en el punto 2 terminar el procedimiento
-4. Iniciar una transaccion antes de iniciar el bucle
-5. Iterar sobre cada uno de los registros devueltos en el punto 2
-6. Eliminar los registros de la tabla "EVENT_TRANSACTION" donde el campo "FK_TRANSACTION_ID" sea igual al campo "ID" del punto 2 y guardar la cantidad de registros eliminados en la variable "deleted_event"
-7. Eliminar el registro de la tabla "TRANSACTION_INFORMATION" donde el valor del campo "ID" que sea igual al campo "ID" del punto 2  y guardar la cantidad de registros eliminados en la variable "deleted_tran"
-8. En cada ciclo, actualizar la variable "total_records_deleted", sumando al valor actual el valor de las variables "deleted_event" y "deleted_tran"
-9. En cada ciclo se debe verificar si el valor de la variable "total_records_deleted" es mayor o igual al parametro de entrada "max_records". Si se cumple la condición finalizar el procedimiento
-10. Confirmar la transacción iniciada en el punto 4
-11. Devolver el valor de la variable "total_records_deleted"
-12. Implementar un control de errores que haga un rollback de transacciones pendientes
+### System:
+Eres un asistente AI especializado en verificar el cumplimiento de lineamientos en el código SQL para PostgreSQL.
 ```
+
+Ahora buscar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
+```
+### Human:
+
+Consulta: %1
+
+Debes verificar si el código SQL en la consulta cumple los siguientes lineamientos:
+
+1. Organización y Estructura del Código
+   - Nombres descriptivos:
+     - Usa nombres claros y representativos para procedimientos y parámetros.
+     - Ejemplo: 
+       CREATE PROCEDURE update_order_status(order_id INT, new_status VARCHAR)
+       BEGIN
+         -- Lógica aquí
+       END;
+
+   - Comentarios claros:
+     - Documenta la lógica del procedimiento.
+     - Ejemplo:
+       -- Actualiza el estado de un pedido específico
+
+2. Seguridad y Control de Acceso
+   - Uso de SECURITY DEFINER:
+     - Limita los privilegios y utiliza SECURITY DEFINER solo si es necesario.
+     - Ejemplo:
+       CREATE PROCEDURE sensitive_procedure()
+       SECURITY DEFINER
+       BEGIN
+         -- Lógica sensible
+       END;
+
+   - Validación de parámetros:
+     - Valida las entradas para evitar ataques de inyección SQL.
+     - Ejemplo:
+       CREATE PROCEDURE validate_input(id INT)
+       BEGIN
+         IF id IS NULL THEN
+           RAISE EXCEPTION 'El ID no puede ser NULL';
+         END IF;
+       END;
+
+3. Eficiencia y Rendimiento
+   - Evita SELECT *:
+     - Selecciona solo las columnas necesarias.
+     - Ejemplo:
+       SELECT nombre, apellido FROM usuarios WHERE id = input_id;
+
+   - Uso efectivo de índices:
+     - Verifica los índices adecuados antes de crear procedimientos que interactúen con grandes conjuntos de datos.
+   - Operaciones por lotes:
+     - Utiliza operaciones en conjunto en vez de por fila.
+     - Ejemplo:
+       INSERT INTO inventario (producto_id, cantidad) 
+       SELECT producto_id, SUM(cantidad) FROM ventas GROUP BY producto_id;
+
+4. Manejo de Errores
+   - Uso de bloques EXCEPTION:
+     - Implementa manejo de excepciones para capturar errores.
+     - Ejemplo:
+       CREATE PROCEDURE handle_error_example()
+       BEGIN
+         BEGIN
+           -- Operación que puede fallar
+         EXCEPTION WHEN OTHERS THEN
+           RAISE NOTICE 'Ocurrió un error';
+         END;
+       END;
+
+5. Mantenimiento y Evolución
+   - Versionado de procedimientos:
+     - Usa nombres versionados para manejar cambios.
+     - Ejemplo:
+       CREATE PROCEDURE calculate_tax_v1()
+       CREATE PROCEDURE calculate_tax_v2()
+
+6. Optimización del Uso de Transacciones
+   - Control de transacciones:
+     - Mantén las transacciones cortas y claras.
+     - Ejemplo:
+       BEGIN;
+       UPDATE cuentas SET balance = balance - 100 WHERE id = 1;
+       COMMIT;
+
+   - Manejo de bloqueos:
+     - Evita bloqueos prolongados usando niveles de aislamiento adecuados.
+     - Ejemplo:
+       SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+7. Uso Eficiente de Tipos de Datos
+   - Selección de tipos adecuados:
+     - Utiliza tipos de datos que optimicen espacio y rendimiento.
+     - Ejemplo:
+       CREATE PROCEDURE set_user_age(user_id INT, user_age SMALLINT)
+
+8. Modularidad y Reutilización
+   - Encapsulación de lógica repetida:
+     - Separa lógica común en funciones reutilizables.
+     - Ejemplo:
+       CREATE FUNCTION calcular_iva(precio DECIMAL) RETURNS DECIMAL AS $$
+       BEGIN
+         RETURN precio * 0.16;
+       END;
+       $$ LANGUAGE plpgsql;
+
+Formato para uso en Prompts:
+
+1. Nombre del procedimiento: create_procedure
+   - Descripción: Crea un procedimiento almacenado en PostgreSQL.
+   - Ejemplo:
+     CREATE PROCEDURE procedure_name(param1 TYPE, param2 TYPE)
+     LANGUAGE plpgsql
+     AS $$
+     BEGIN
+       -- Código aquí
+     END;
+     $$;
+
+2. Validación de parámetros: validate_input
+   - Descripción: Valida los parámetros de entrada de un procedimiento.
+   - Ejemplo:
+     IF input IS NULL THEN
+       RAISE EXCEPTION 'El parámetro no puede ser NULL';
+     END IF;
+
+Respuesta:
+
+### Assistant:
+%2
+```
+
 
 
