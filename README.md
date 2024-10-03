@@ -102,4 +102,8 @@ Instrucciones para el asistente:
 %2<|eot_id|>
 ```
 
+## 7. Casos de uso
+
+## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
+Se deben seguir los pasos del numeral 5.1.1 para crear la colección "Transito" utilizando el archivo "ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf" que puede descargar de
 
