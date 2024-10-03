@@ -293,5 +293,56 @@ Respuesta:
 %2
 ```
 
+Ahora vamos a crear un nuevo chat donde vamos a seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF` e ingresar el siguiente código SQL PostgreSQL:
+
+```
+CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
+DECLARE 
+    deleted_event INTEGER := 0;
+    deleted_tran INTEGER := 0;
+    total_records_deleted INTEGER := 0;
+BEGIN
+    -- Iniciar transaccion
+    BEGIN TRANSACTION;
+    
+    -- Recuperar registros de la tabla "TRANSACTION_INFORMATION" con fechas mayores a 90 días.
+    SELECT ID INTO deleted_tran FROM TRANSACTION_INFORMATION WHERE date > CURRENT_DATE - INTERVAL '90 days';
+    
+    -- Verificar si se devuelven registros en el punto anterior
+    IF NOT FOUND THEN 
+        RAISE EXCEPTION 'No se encontraron registros con más de 90 días. Terminando procedimiento.';
+    END IF;
+    
+    -- Iterar sobre cada uno de los registros devueltos en el punto anterior
+    FOR rec IN SELECT * FROM deleted_tran LOOP
+        EXECUTE 'DELETE FROM EVENT_TRANSACTION WHERE FK_TRANSACTION_ID = $1' INTO deleted_event USING rec.id;
+        
+        -- Guardar la cantidad de registros eliminados en las variables correspondientes
+        total_records_deleted := total_records_deleted + deleted_event;
+    END LOOP;
+    
+    EXECUTE 'DELETE FROM TRANSACTION_INFORMATION WHERE ID = $1' INTO deleted_tran USING rec.id;
+        
+    -- Guardar la cantidad de registros eliminados en las variables correspondientes
+    total_records_deleted := total_records_deleted + deleted_tran;
+    
+    -- Verificar si el valor del variable "total_records_deleted" es mayor o igual al parametro de entrada "max_records". Si se cumple la condición finalizar el procedimiento.
+    IF total_records_deleted >= max_records THEN 
+        -- Confirmar transaccion iniciada en el punto anterior y terminar procedimiento con commit
+        COMMIT;
+        RETURN QUERY SELECT total_records_deleted;
+    ELSE
+        ROLLBACK;
+        RAISE EXCEPTION 'No se han eliminado suficientes registros.';
+    END IF;    
+EXCEPTION WHEN OTHERS THEN 
+    -- Implementar un control de errores que haga rollback de transacciones pendientes en caso de cualquier excepción no capturada previamente
+    ROLLBACK;
+    RAISE EXCEPTION 'Error al eliminar registros: %', SQLERRM;
+END $$ LANGUAGE plpgsql;
+```
+
+La respuesta fue la siguiente:
+![image](https://github.com/user-attachments/assets/c6a42ff7-3874-422c-8bb0-d3945a15daca)
 
 
