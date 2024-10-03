@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/b6d88185-1c6a-4b31-8249-8c24d7ec6d78)# TallerBintecGPT4ALL
-Esta es la guía para el evento Bintec de Bancolombia 2024
+# Esta es la guía para el evento Bintec de Bancolombia 2024
 
 ## 1. GPT4ALL
 Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop
