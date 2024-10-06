@@ -335,5 +335,9 @@ END $$ LANGUAGE plpgsql;
 La respuesta fue la siguiente:
 ![image](https://github.com/user-attachments/assets/db6a06eb-2d90-47e0-98c7-0cc718303b03)
 
+# Fuentes consultadas
+(Configuring Custom Models)[https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models]
+(The 6 Best LLM Tools To Run Models Locally)[https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd]
+
 
 
