@@ -1,4 +1,9 @@
-# Esta es la guía para el evento Bintec de Bancolombia 2024
+# Esta es la guía para el evento Bintec de Bancolombia 2024: Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
+
+Objetivos:
+- Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles
+- Entender como usar templates de prompts para responder de manera efectiva preguntas 
+
 
 ## 1. GPT4ALL
 Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop
