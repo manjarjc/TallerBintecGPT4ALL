@@ -1,4 +1,5 @@
-# Esta es la guía para el evento Bintec de Bancolombia 2024: Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
+# Esta es la guía para el evento Bintec de Bancolombia 2024:
+## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
 Objetivos:
 - Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles
