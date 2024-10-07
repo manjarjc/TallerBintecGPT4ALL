@@ -43,6 +43,8 @@ Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que
 
 `Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. Esto garantiza la privacidad de los datos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
 
+![image](https://github.com/user-attachments/assets/32bd2ea5-c147-4c57-b80f-33c67b31dad0)
+
 Doc Locales permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
 
 **Recomendaciones**
