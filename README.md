@@ -304,19 +304,19 @@ DECLARE
 BEGIN
     BEGIN TRANSACTION;
     
-    SELECT ID INTO deleted_tran FROM TRANSACTION_INFORMATION WHERE date > CURRENT_DATE - INTERVAL '90 days';
+    SELECT ID INTO deleted_tran FROM FACTURA WHERE date > CURRENT_DATE - INTERVAL '90 days';
     
     IF NOT FOUND THEN 
         RAISE EXCEPTION 'No se encontraron registros con más de 90 días. Terminando procedimiento.';
     END IF;
     
     FOR rec IN SELECT * FROM deleted_tran LOOP
-        EXECUTE 'DELETE FROM EVENT_TRANSACTION WHERE FK_TRANSACTION_ID = $1' INTO deleted_event USING rec.id;
+        EXECUTE 'DELETE FROM FACTURA_DETALLE WHERE FK_FACTURA_ID = $1' INTO deleted_event USING rec.id;
         
         total_records_deleted := total_records_deleted + deleted_event;
     END LOOP;
     
-    EXECUTE 'DELETE FROM TRANSACTION_INFORMATION WHERE ID = $1' INTO deleted_tran USING rec.id;
+    EXECUTE 'DELETE FROM FACTURA WHERE ID = $1' INTO deleted_tran USING rec.id;
         
     total_records_deleted := total_records_deleted + deleted_tran;
     
