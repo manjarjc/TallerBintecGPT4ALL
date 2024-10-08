@@ -70,7 +70,7 @@ Se muestra una ventana donde se debe escribir el nombre de la colección; luego 
 
 **c. Por último, clic en `Crear Colección`**
 
-## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTA ABIERTO`
+## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTE ABIERTO`
 
 ![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
 
