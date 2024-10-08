@@ -8,11 +8,11 @@ Objetivos:
 
 
 ## 1. GPT4ALL
-Es una aplicación de escritorio creada por NomicAI que permite descargar y ejecutar modelos de lenguaje grande (LLM) en cualquier PC de escritorio o Laptop
+[GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por Nomic que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptop.
 
 ![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
-Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
+Para la descarga e instalación de GPT4ALL seguir el enlace :link:[instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
 
 ## 2 Ventajas
 - Privacidad de la información 
