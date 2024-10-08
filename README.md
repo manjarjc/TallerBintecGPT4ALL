@@ -3,7 +3,8 @@
 
 Objetivos:
 - Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles
-- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales 
+- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales
+- Resolver diferentes retos que permitiran adquirir destrezas en obtener respuestas de información en documentos locales
 
 
 ## 1. GPT4ALL
