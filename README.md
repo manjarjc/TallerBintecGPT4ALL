@@ -35,7 +35,7 @@ Para la descarga e instalación de GPT4ALL seguir el enlace :link:[instalación]
 ## 5.1 Descargar modelos
 Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelo`
 
-![image](https://github.com/user-attachments/assets/eca50b73-2b14-4d69-b736-9bc2f6e6731e)
+![image](https://github.com/user-attachments/assets/56523a9e-2b8e-4f25-9bea-6262f85195e4)
 
 **Buscar el modelo en la lista y dar clic en `Instalar`. La descarga puede tardar varias horas dependiendo del tamaño**
 
