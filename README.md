@@ -86,7 +86,7 @@ Para obtener los mejores resultados se deben configurar dos propiedades del mode
 
 En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`
 
-![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
+![image](https://github.com/user-attachments/assets/ebf6ea77-b178-4935-943d-d0deb28d46d5)
 
 Buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
 ```
