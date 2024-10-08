@@ -56,24 +56,24 @@ Doc Locales permite crear `Colecciones`. Cada Colección tiene un nombre y la ru
 ### 5.1.1 Crear una Colección
 En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en esta carpeta los documentos a consultar.
 
-a. Clic en `Docs Locales`
+**a. Clic en `Docs Locales`**
 
 ![image](https://github.com/user-attachments/assets/16a31503-aa12-4150-b393-50cc66464970)
 
-b. Clic en `+Agregar colección de documentos` o en `+Agregar colección`.
+**b. Clic en `+Agregar colección de documentos` o en `+Agregar colección`.**
 
 ![image](https://github.com/user-attachments/assets/542cabb4-3b14-423b-90a9-6609125506ec)
 
 Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta
 
-![image](https://github.com/user-attachments/assets/8f1d3a3b-721b-4352-8c99-337d58ba4d36)
+![image](https://github.com/user-attachments/assets/d4a492ec-720a-4653-816d-418effa457ad)
 
-c. Por último, clic en `Crear Colección`
+**c. Por último, clic en `Crear Colección`**
 
-**GPT4LL empieza a indexar los documentos en la carpeta seleccionada**
+## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTA ABIERTO`
+
 ![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
 
-## A partir del momento que se crea una colección, GPT4ALL monitorea la carpeta. Si se eliminan o agregan documentos de la carpeta asociada a la colección ésta se actualiza automáticamente
 
 ![image](https://github.com/user-attachments/assets/9718b670-0359-48d0-aca3-81eb90fdf844)
 
