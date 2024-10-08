@@ -164,7 +164,7 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos
 
-El código que debe validar para el cumplimiento de los lineamientos es el siguiente:
+Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
 
 ```
 1. Organización y Estructura del Código
