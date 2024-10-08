@@ -153,15 +153,16 @@ Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por la
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
 
-Hacer la siguiente pregunta:
+Hacer las siguiente pregunta:
 ```
 De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
 ```
 
-![image](https://github.com/user-attachments/assets/ca42a4fe-be9c-4899-96d3-341c6ca40793)
+Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año
+
+
 
 ## 7.3 Validar cumplimiento de lineamientos en código SQL
-
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
