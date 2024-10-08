@@ -78,6 +78,9 @@ c. Clic en `Crear Colección`
 ## 6. Configuración del modelo
 Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
 
+**`Indicación del sistema`** o `System Prompt` Es una nstrucción predefinida que guía el comportamiento y las respuestas de un modelo de IA generativa. Establece el contexto y las reglas con las que el modelo debe interactuar.
+**`Plantilla de indicación`** o `User Prompt` o simplemente `Prompt` es una instrucción o pregunta ingresada por el usuario para interactuar con un modelo de IA generativa. Define la tarea o el tipo de respuesta que el usuario espera recibir del modelo.
+
 En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`
 
 ![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
