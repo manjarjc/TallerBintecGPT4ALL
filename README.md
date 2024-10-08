@@ -328,9 +328,9 @@ END $$ LANGUAGE plpgsql;
 
 
 # Fuentes consultadas
-(Configuring Custom Models)[https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models]
-(The 6 Best LLM Tools To Run Models Locally)[https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd]
-(¿Quieres comprender qué es RAG y su relación con los LLM y la IA generativa?)[https://es.linkedin.com/pulse/quieres-comprender-qu%C3%A9-es-rag-y-su-relaci%C3%B3n-con-los-llm-hern%C3%A1ndez-ley3f]
+[Configuring Custom Models](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models)
+[The 6 Best LLM Tools To Run Models Locally](https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd)
+[¿Quieres comprender qué es RAG y su relación con los LLM y la IA generativa?](https://es.linkedin.com/pulse/quieres-comprender-qu%C3%A9-es-rag-y-su-relaci%C3%B3n-con-los-llm-hern%C3%A1ndez-ley3f)
 
 
 
