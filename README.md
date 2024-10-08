@@ -58,15 +58,17 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 a. Clic en `Docs Locales`
 
-![image](https://github.com/user-attachments/assets/de0f2cd1-ae0f-4c4b-9d08-dea637261cc2)
+![image](https://github.com/user-attachments/assets/16a31503-aa12-4150-b393-50cc66464970)
 
-b. Clic en `+Agregar colección`. Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta
+b. Clic en `+Agregar colección de documentos` o en `+Agregar colección`.
 
-![image](https://github.com/user-attachments/assets/8a3a34ec-cf85-46a0-9361-de380a14452a)
+![image](https://github.com/user-attachments/assets/542cabb4-3b14-423b-90a9-6609125506ec)
 
-c. Clic en `Crear Colección`
+Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta
 
 ![image](https://github.com/user-attachments/assets/8f1d3a3b-721b-4352-8c99-337d58ba4d36)
+
+c. Por último, clic en `Crear Colección`
 
 **GPT4LL empieza a indexar los documentos en la carpeta seleccionada**
 ![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
