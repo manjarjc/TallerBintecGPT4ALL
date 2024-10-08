@@ -3,7 +3,7 @@
 
 Objetivos:
 - Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles
-- Entender como usar templates de prompts para responder de manera efectiva preguntas 
+- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales 
 
 
 ## 1. GPT4ALL
@@ -14,10 +14,10 @@ Es una aplicación de escritorio creada por NomicAI que permite descargar y ejec
 Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
 
 ## 2 Ventajas
-- No requiere acceso a internet 
-- No requiere GPU 
 - Privacidad de la información 
 - Acceso a una amplia variedad de modelos
+- No requiere acceso a internet 
+- No requiere hardware de altas prestaciones
 
 ## 3 Desventajas
 - El prompt debe ser más detallado 
@@ -25,14 +25,14 @@ Para la descarga e instalación de GPT4ALL seguir el enlace [instalación](https
 - Mas lento para responder
 
 ## 4 Requerimientos
-- Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5.  
+- Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5 o similar.
 - Tener instalado GPT4All 
-- Descargar modelos `Llama 3 8B Instruct` y `TheBloke/CodeLlama-7B-Instruct-GGUF`
+- Descargar los modelos `Llama 3 8B Instruct` y `TheBloke/CodeLlama-7B-Instruct-GGUF`. La sección 5.1 muestra como hacer la descarga
 
 ## 5 Configurar GPT4ALL
 
 ## 5.1 Descargar modelos
-En el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelo`
+Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelo`
 
 ![image](https://github.com/user-attachments/assets/eca50b73-2b14-4d69-b736-9bc2f6e6731e)
 
