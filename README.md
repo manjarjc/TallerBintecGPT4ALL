@@ -160,24 +160,13 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 ![image](https://github.com/user-attachments/assets/ca42a4fe-be9c-4899-96d3-341c6ca40793)
 
-## 7.3 Generación de código: validar cumplimiento de lineamientos
+## 7.3 Validar cumplimiento de lineamientos en código SQL
 
-Este es un caso que no involucra Documentos Locales; debemos proporcionar unos lineamientos que se deben cumplir al desarrollar código para PostgreSQL. Para lograrlo, debemos configurar dos propiedades del modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`: `Indicación del sistema` y `Plantilla de indicación`
+Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos
 
-Buscar la propiedad `Indicación del sistema`; borrar el contenido y agregar el siguiente texto:
+El código que debe validar para el cumplimiento de los lineamientos es el siguiente:
+
 ```
-### System:
-Eres un asistente AI especializado en verificar el cumplimiento de lineamientos en el código SQL para PostgreSQL.
-```
-
-Ahora buscar la propiedad `Plantilla de indicación`; borrar el contenido y agregar lo siguiente:
-```
-### Human:
-
-Consulta: %1
-
-Debes verificar si el código SQL en la consulta cumple los siguientes lineamientos:
-
 1. Organización y Estructura del Código
    - Nombres descriptivos:
      - Usa nombres claros y representativos para procedimientos y parámetros.
@@ -294,14 +283,9 @@ Formato para uso en Prompts:
      IF input IS NULL THEN
        RAISE EXCEPTION 'El parámetro no puede ser NULL';
      END IF;
-
-Respuesta:
-
-### Assistant:
-%2
 ```
 
-Ahora crear un nuevo chat y seleccionar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`. Ingresar el siguiente código de ejemplo de un procedimiento almacenado para PostgreSQL en `Enviar un mensaje...`:
+A continuación el procedimiento almacenado de PostgreSQL que se debe validar si cumple los lineamientos de la organización:
 
 ```
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
@@ -340,8 +324,6 @@ BEGIN
 END $$ LANGUAGE plpgsql;
 ```
 
-La respuesta fue la siguiente:
-![image](https://github.com/user-attachments/assets/db6a06eb-2d90-47e0-98c7-0cc718303b03)
 
 # Fuentes consultadas
 (Configuring Custom Models)[https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models]
