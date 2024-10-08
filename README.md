@@ -53,7 +53,7 @@ Doc Locales permite crear `Colecciones`. Cada Colección tiene un nombre y la ru
 - Por defecto solo se indexarán archivos con extensiones **txt,pdf,md,rst**
 
 ### 5.1.1 Crear una Colección
-En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en esta carpeta los documentos a consultar. Se recomienda crear una carpeta para cada categoría
+En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en esta carpeta los documentos a consultar.
 
 a. Clic en `Docs Locales`
 
