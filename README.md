@@ -164,7 +164,7 @@ Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en
 
 
 ## 7.3 Validar cumplimiento de lineamientos en código SQL
-Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos
+Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
 
