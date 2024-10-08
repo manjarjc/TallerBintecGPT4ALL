@@ -64,11 +64,11 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 ![image](https://github.com/user-attachments/assets/542cabb4-3b14-423b-90a9-6609125506ec)
 
-Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta
+**c. Se muestra una ventana donde se debe escribir el nombre de la colección; luego clic en `Explorar` para seleccionar la carpeta**
 
 ![image](https://github.com/user-attachments/assets/d4a492ec-720a-4653-816d-418effa457ad)
 
-**c. Por último, clic en `Crear Colección`**
+**d. Por último, clic en `Crear Colección`**
 
 ## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTE ABIERTO`
 
