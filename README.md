@@ -78,7 +78,8 @@ c. Clic en `Crear Colección`
 ## 6. Configuración del modelo
 Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
 
-En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo`
+En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`
+
 ![image](https://github.com/user-attachments/assets/5d6c6b45-1777-4551-b9f6-4f951e43fb4a)
 
 Buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
