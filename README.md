@@ -70,12 +70,9 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 **d. Por último, clic en `Crear Colección`**
 
-## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTE ABIERTO`
+## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTÉ ABIERTO`
 
-![image](https://github.com/user-attachments/assets/1f73fda9-566d-4a10-877b-6145002ebca1)
-
-
-![image](https://github.com/user-attachments/assets/9718b670-0359-48d0-aca3-81eb90fdf844)
+![image](https://github.com/user-attachments/assets/c6aa3641-9f27-4b04-83eb-3816f5d3777d)
 
 ## 6. Configuración del modelo
 Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
@@ -125,37 +122,28 @@ Instrucciones para el asistente:
 Se deben seguir los pasos del numeral `5.1.1` para crear la colección "Transito" utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
 Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5557)
 
-**En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+Nuevo Chat`**
-![image](https://github.com/user-attachments/assets/4e272c37-4189-4cad-845c-392aad6b3543)
+### a. En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+Nuevo Chat`
 
+### b. Ahora seleccionar el modelo `Llama 3 8B instruct` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`
 
-**Ahora seleccionar el modelo `Llama 3 8B instruct` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`**
+![image](https://github.com/user-attachments/assets/6831714b-996f-4030-9037-9cb51aab142e)
 
-![image](https://github.com/user-attachments/assets/1959e3cc-5ada-4c6f-a6e5-b9551ddf102a)
-
-**En la parte inferior, en el cuadro que dice `Enviar un mensaje` escribir la siguiente pregunta:**
-![image](https://github.com/user-attachments/assets/016da59b-2b38-4855-ab2a-68962e3c687d)
+### c. En la parte inferior, en el cuadro que dice `Enviar un mensaje` escribir la siguiente pregunta:
 
 ```
 Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 ```
 
-**Presionar enter, lo cual inicia el proceso de buscar en DocumentosLocales para responder**
-![image](https://github.com/user-attachments/assets/26a8d9bd-c8b6-4e99-85f5-3ae4caf885c1)
+### d. Presionar enter. Se inicia el proceso de buscar en `DocumentosLocales` para responder la pregunta
+
 
 **La respuesta puede variar pero siempre debe mencionar que partes del documento se consultaron**
-![image](https://github.com/user-attachments/assets/0d6c3a6a-b5b2-4615-8283-84613422db02)
 
-**Hacer las siguientes preguntas y verificar las fuentes consultadas:**
-```
-﻿En qué circunstancias puede un guardia de tránsito inmovilizar mi vehículo?
-```
-```
-Qué pasos debe seguir un conductor para reportar un accidente y levantar un croquis del incidente de tránsito?
-```
-```
-Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por las autoridades de tránsito?
-```
+![image](https://github.com/user-attachments/assets/343de858-c1b8-4226-bede-832666f12738)
+
+
+### Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
+
 
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
