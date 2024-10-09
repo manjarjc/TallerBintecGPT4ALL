@@ -8,7 +8,7 @@ Objetivos:
 
 
 ## 1. GPT4ALL
-[GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por Nomic que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptop.
+[GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops.
 
 ![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
