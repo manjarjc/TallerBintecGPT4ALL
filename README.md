@@ -116,6 +116,8 @@ Instrucciones para el asistente:
 %2<|eot_id|>
 ```
 
+**Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes.**
+
 ## 7. Casos de uso
 
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
@@ -142,7 +144,7 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 ![image](https://github.com/user-attachments/assets/343de858-c1b8-4226-bede-832666f12738)
 
 
-### Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
+### :parrot:Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
 
 
 ## 7.2 Asesor de finanzas personales
