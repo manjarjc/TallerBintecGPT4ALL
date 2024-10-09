@@ -6,7 +6,6 @@ Objetivos:
 - Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales
 - Resolver diferentes retos que permitiran adquirir destrezas en obtener respuestas de información en documentos locales
 
-
 ## 1. GPT4ALL
 [GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops.
 
@@ -32,8 +31,8 @@ Para la descarga e instalación de GPT4ALL seguir el enlace :link:[instalación]
 
 ## 5 Configurar GPT4ALL
 
-## 5.1 Descargar modelos
-Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+Agregar Modelo`
+## 5.1 Descarga de modelos
+Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+ Agregar Modelo`
 
 ![image](https://github.com/user-attachments/assets/56523a9e-2b8e-4f25-9bea-6262f85195e4)
 
@@ -60,7 +59,7 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 ![image](https://github.com/user-attachments/assets/16a31503-aa12-4150-b393-50cc66464970)
 
-**b. Clic en `+Agregar colección de documentos` o en `+Agregar colección`.**
+**b. Clic en `+Agregar colección de documentos` o en `+ Agregar colección`.**
 
 ![image](https://github.com/user-attachments/assets/542cabb4-3b14-423b-90a9-6609125506ec)
 
