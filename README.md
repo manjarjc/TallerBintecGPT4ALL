@@ -157,10 +157,33 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 ## Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año
 
 ## 7.3 Reto: Construir un prompt para responder reclamos de usuarios con Documentos Locales
-Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a las normas. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf)
+Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR`, Crear un prompt `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
+
+GPT44all debe responder con solo ingresar el siguiente reclamo
+```
+Mark Smith
+Director de Relaciones con el Cliente
+Sofa Showroom
+555 Broadway
+Cityland, KS 66214
+Asunto: Sofá roto
+Número de pedido: S-7654
+Estimado Sr. Smith:
+El 1 de octubre de 2023, compré un sofá Plush, modelo número 25811, en el sitio web de Sofa Showroom. Pagué COP $6500000 con mi tarjeta de crédito por el sofá y la entrega. Sofa Showroom entregó el sofá en mi casa el 10 de octubre de 2023.
+Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está defectuoso. Una de las patas se rompió el 30 de octubre de 2023. El sofá está inestable y se balancea cuando me siento en él, por lo que no es cómodo ni relajante. No he usado este sofá de una manera que pueda causar daño alguno. Informé sobre este problema en la página de Servicio al Cliente del sitio web de Sofa Showroom el 5 y 8 de noviembre. Dejé mi correo electrónico y pedí que alguien se pusiera en contacto conmigo, pero nadie me ha respondido.
+Para resolver el problema, me gustaría que su empresa recogiera este sofá de forma gratuita y me reembolsara los $650 que pagué. He adjuntado copias de mis registros, incluyendo mi recibo, factura de entrega y fotos del sofá roto.
+Espero su respuesta y una solución a mi problema. Esperaré hasta el 12 de diciembre de 2023 antes de ponerme en contacto con la oficina de protección al consumidor de mi estado o buscar otra ayuda.
+Por favor, contácteme en la dirección indicada anteriormente o por teléfono al 123-456-7890.
+Atentamente,
+Jane Doe
+Adjuntos: Recibo, Factura de entrega, Fotos
+```
 
 ## 7.4 Reto: Asistente para Entrenamiento y Capacitación del Personal Bancario
-https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf
+[](https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf)
+
+## 7.5 Reto: Que tipo de mantenimiento debo hacer en mi Renault Kwid
+[Descargar manual Kwid](https://cdn.group.renault.com/ren/co/manuales/nuevo-kwid/NU-1401-3-XBB-ph2-999109444S-05-2023.pdf)
 
 ## 7.4 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
