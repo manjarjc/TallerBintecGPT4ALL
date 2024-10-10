@@ -156,7 +156,13 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 ## Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año
 
-## 7.3 Reto: Validar cumplimiento de lineamientos en código SQL
+## 7.3 Reto: Construir un prompt para responder reclamos de usuarios con Documentos Locales
+Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a las normas. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf)
+
+## 7.4 Reto: Asistente para Entrenamiento y Capacitación del Personal Bancario
+https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf
+
+## 7.4 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
