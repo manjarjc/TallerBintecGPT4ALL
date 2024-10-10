@@ -11,7 +11,7 @@ Objetivos:
 
 ![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
-Para la descarga e instalación de GPT4ALL seguir el enlace :link:[instalación](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) y descargar el instalador de acuerdo al sistema operativo de su PC o laptop
+La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) se hace de acuerdo al sistema operativo de su PC o laptop
 
 ## 2 Ventajas
 - Privacidad de la información 
