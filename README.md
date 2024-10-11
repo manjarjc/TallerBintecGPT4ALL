@@ -100,7 +100,6 @@ Recuerda: Tu conocimiento se limita estrictamente a lo que está contenido en lo
 
 Ahora buscar la propiedad `Plantilla de indicación`, borrar el contenido y agregar lo siguiente:
 ```
-<|start_header_id|>user<|end_header_id|>
 Consulta: %1
 
 Instrucciones para el asistente:
@@ -109,8 +108,6 @@ Instrucciones para el asistente:
 3. Proporciona una respuesta basada exclusivamente en la información encontrada en los localdocs.
 4. Si no encuentras información relevante en los localdocs, indica claramente que no puedes responder debido a la falta de información en los documentos locales.
 5. Cita la fuente específica del documento local para cada pieza de información que proporciones.
-<|eot_id|><|start_header_id|>assistant<|end_header_id|>
-%2<|eot_id|>
 ```
 
 **Que significan las palabras encerradas entre <> antes y después del prompt?**
@@ -142,26 +139,23 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 
 ### d. Presionar enter. Se inicia el proceso de buscar en `DocumentosLocales` para responder la pregunta
 
-
 **La respuesta puede variar pero siempre debe mencionar que partes del documento se consultaron**
 
 ![image](https://github.com/user-attachments/assets/343de858-c1b8-4226-bede-832666f12738)
 
-
 ### :parrot:Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
-
 
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
 
-Hacer la siguiente pregunta:
+Crear un nuevo chat, seleccionar el modelo `Llama 3 8B Instruct` y hacer la siguiente pregunta:
 ```
 De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
 ```
 
 **Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año**
 
-## 7.3 Construir un prompt para presentar reclamos con Documentos Locales
+## 7.3 Reto: Construir un prompt para presentar reclamos con Documentos Locales
 Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt y pegarlo en `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
 
 GPT44all debe responder con solo ingresar el siguiente reclamo
@@ -201,13 +195,6 @@ El reclamo del cliente es el siguiente:
 %2<|eot_id|>
 </pre></code>
 </details>
-
-
-## 7.4 Reto: Asistente para Entrenamiento y Capacitación del Personal Bancario
-[Atención al consumidor](https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf)
-
-## 7.5 Preguntas al manual de un automóvil
-[Descargar manual Kwid](https://cdn.group.renault.com/ren/co/manuales/nuevo-kwid/NU-1401-3-XBB-ph2-999109444S-05-2023.pdf)
 
 ## 7.4 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
