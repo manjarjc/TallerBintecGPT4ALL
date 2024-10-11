@@ -110,12 +110,11 @@ Instrucciones para el asistente:
 5. Cita la fuente específica del documento local para cada pieza de información que proporciones.
 ```
 
-**Que significan las palabras encerradas entre <> antes y después del prompt?**
-
+**Porque hay un %1 en el prompt?**
 - %1 se usa como marcador de posición para el contenido de la pregunta del usuario.
 - %2 se usa como marcador de posición para el contenido de la respuesta del modelo.
 
-Para entender las demas etiquetas [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
+Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
 
 **Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes.**
 
