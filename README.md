@@ -80,7 +80,7 @@ Para obtener los mejores resultados se deben configurar dos propiedades del mode
 
 En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`
 
-![image](https://github.com/user-attachments/assets/ebf6ea77-b178-4935-943d-d0deb28d46d5)
+![image](https://github.com/user-attachments/assets/d808d285-99f3-4a99-818b-ad66ce33a54f)
 
 Buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
 ```
@@ -116,7 +116,7 @@ Instrucciones para el asistente:
 
 Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
 
-**Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes.**
+**Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes. Mas adelante podremos comparar las respuestas con y sin los prompts anteriores**
 
 ## 7. Casos de uso
 
@@ -141,6 +141,13 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 **La respuesta puede variar pero siempre debe mencionar que partes del documento se consultaron**
 
 ![image](https://github.com/user-attachments/assets/343de858-c1b8-4226-bede-832666f12738)
+
+### Por que es importante el prompt que ingresamos en la configuración del modelo?
+Esta es la respuesta sin la configuración realizada en la sección 6, es decir inmediatamente despúes de descargar el modelo
+
+![image](https://github.com/user-attachments/assets/a1cea138-af2c-455c-a33f-071854577206)
+
+Observamos que la respuesta no se generó con información del documento; al buscar en el pdf no encontramos referencias explicitas a sanciones económicas.
 
 ### :parrot:Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
 
