@@ -72,7 +72,7 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 ![image](https://github.com/user-attachments/assets/c6aa3641-9f27-4b04-83eb-3816f5d3777d)
 
 ## 6. Configuración del modelo
-Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.promptingguide.ai/es/introduction)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
+Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
 
 **`Indicación del sistema`** o `System Prompt` Es una instrucción predefinida que guía el comportamiento y las respuestas de un modelo de IA generativa. Establece el contexto y las reglas con las que el modelo debe interactuar.
 
@@ -371,9 +371,9 @@ END $$ LANGUAGE plpgsql;
 - :link:[Configuring Custom Models](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models)
 - :link:[The 6 Best LLM Tools To Run Models Locally](https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd)
 - :link:[¿Quieres comprender qué es RAG y su relación con los LLM y la IA generativa?](https://es.linkedin.com/pulse/quieres-comprender-qu%C3%A9-es-rag-y-su-relaci%C3%B3n-con-los-llm-hern%C3%A1ndez-ley3f)
-- :link:[Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
-- :link:[CodeLlama-7B-Instruct](https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF)
-- :link:[promptingguide](https://www.promptingguide.ai/es/introduction)
+- :link:[Prompt Engineering: qué es y 15 técnicas eficaces + consejos]([https://www.promptingguide.ai/es/introduction])
+- :link:[Referencia del modelo Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
+- :link:[Referencia del modelo CodeLlama-7B-Instruct](https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF)
 
 
 
