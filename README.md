@@ -113,6 +113,13 @@ Instrucciones para el asistente:
 %2<|eot_id|>
 ```
 
+**Que significan las palabras encerradas entre <> antes y después del prompt?**
+
+- %1 se usa como marcador de posición para el contenido de la pregunta del usuario.
+- %2 se usa como marcador de posición para el contenido de la respuesta del modelo.
+
+Para entender las demas etiquetas [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
+
 **Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes.**
 
 ## 7. Casos de uso
@@ -121,7 +128,7 @@ Instrucciones para el asistente:
 Se deben seguir los pasos del numeral `5.1.1` para crear la colección "Transito" utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
 Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5557)
 
-### a. En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+Nuevo Chat`
+### a. En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+ Nuevo Chat`
 
 ### b. Ahora seleccionar el modelo `Llama 3 8B instruct` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`
 
@@ -147,15 +154,15 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
 
-Hacer las siguiente pregunta:
+Hacer la siguiente pregunta:
 ```
 De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
 ```
 
-## Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año
+**Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año**
 
-## 7.3 Reto: Construir un prompt para responder reclamos de usuarios con Documentos Locales
-Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR`, Crear un prompt `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
+## 7.3 Construir un prompt para presentar reclamos con Documentos Locales
+Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt y pegarlo en `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
 
 GPT44all debe responder con solo ingresar el siguiente reclamo
 ```
@@ -177,10 +184,29 @@ Jane Doe
 Adjuntos: Recibo, Factura de entrega, Fotos
 ```
 
-## 7.4 Reto: Asistente para Entrenamiento y Capacitación del Personal Bancario
-[](https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf)
+<details>
+  <summary>Haz clic para mostrar la respuesta</summary>
+<pre><code>
+<|start_header_id|>user<|end_header_id|>
+Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cliente. La respuesta debe considerar los siguientes puntos:
+1. Derechos del consumidor: Indica qué derechos específicos tiene el cliente según la normativa presentada en el documento en caso de recibir un producto defectuoso.
+2. Proceso de reclamo: Describe el proceso que debe seguir el cliente para formalizar su reclamo y qué tiempos y procedimientos se deben cumplir por parte de la empresa para resolver el problema, de acuerdo con las políticas establecidas en el documento.
+3. Soluciones posibles: Menciona las opciones que la empresa debe ofrecer al cliente (como reparación, reemplazo o reembolso) en conformidad con los criterios y estándares normativos del documento.
+4. Busca información relevante únicamente en los documentos locales proporcionados.
 
-## 7.5 Reto: Que tipo de mantenimiento debo hacer en mi Renault Kwid
+Asegúrate de citar textualmente las secciones aplicables del documento cuando sea necesario para respaldar la respuesta.
+El reclamo del cliente es el siguiente:
+%1
+<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+%2<|eot_id|>
+</pre></code>
+</details>
+
+
+## 7.4 Reto: Asistente para Entrenamiento y Capacitación del Personal Bancario
+[Atención al consumidor](https://www.fna.gov.co/atencion-ciudadana/sistema-de-atencion-al-consumidor/Manual/8243%20MANUAL%20SAC.pdf)
+
+## 7.5 Preguntas al manual de un automóvil
 [Descargar manual Kwid](https://cdn.group.renault.com/ren/co/manuales/nuevo-kwid/NU-1401-3-XBB-ph2-999109444S-05-2023.pdf)
 
 ## 7.4 Reto: Validar cumplimiento de lineamientos en código SQL
@@ -354,6 +380,7 @@ END $$ LANGUAGE plpgsql;
 - :link:[¿Quieres comprender qué es RAG y su relación con los LLM y la IA generativa?](https://es.linkedin.com/pulse/quieres-comprender-qu%C3%A9-es-rag-y-su-relaci%C3%B3n-con-los-llm-hern%C3%A1ndez-ley3f)
 - :link:[Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
 - :link:[CodeLlama-7B-Instruct](https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF)
+- :link:[promptingguide](https://www.promptingguide.ai/es/introduction)
 
 
 
