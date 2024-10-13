@@ -213,51 +213,44 @@ El reclamo del cliente es el siguiente:
 Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar que parte agregar la propiedades `Indicación del sistema` (System Prompt) y que parte va en `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
 
 <details>
-  <summary>Clic para mostrar el Prompt template:</summary>
+  <summary>Clic para mostrar el Prompt template</summary>
 <pre><code>
-Eres un experto revisor de código Python. Tu tarea es analizar el siguiente script de Python y verificar si cumple con los lineamientos de nuestra organización. Presta especial atención a los siguientes aspectos:
+### System:
+Eres un experto en código de lenguaje Python. Tu tarea es analizar scripts de Python y verificar si cumplen los lineamientos descritos a continuación:
 
+Instrucciones para validar cumplimiento de los lineamientos:
 1. Código limpio:
-   - ¿El código es legible y fácil de entender?
-   - ¿Se utilizan nombres descriptivos para variables, funciones y clases?
-   - ¿El código sigue una estructura lógica y coherente?
-
+¿El código es legible y fácil de entender?
+¿Se utilizan nombres descriptivos para variables, funciones y clases?
+¿El código sigue una estructura lógica y coherente?
 2. Buenas prácticas:
-   - ¿Se siguen las convenciones de estilo de PEP 8?
-   - ¿Se utilizan estructuras de control apropiadas?
-   - ¿Se manejan adecuadamente los errores y excepciones?
-   - ¿Se evita la duplicación de código?
-
+¿Se siguen las convenciones de estilo de PEP 8?
+¿Se utilizan estructuras de control apropiadas?
+¿Se manejan adecuadamente los errores y excepciones?
+¿Se evita la duplicación de código?
 3. Documentación:
-   - ¿Existe un docstring para el módulo, funciones y clases?
-   - ¿Los comentarios son claros y útiles, explicando el "por qué" en lugar del "qué"?
-   - ¿Se incluye información sobre los parámetros de entrada y valores de retorno en las funciones?
-
+¿Existe un docstring para el módulo, funciones y clases?
+¿Los comentarios son claros y útiles, explicando el "por qué" en lugar del "qué"?
+¿Se incluye información sobre los parámetros de entrada y valores de retorno en las funciones?
 4. Importación de librerías:
-   - ¿Se importan solo las librerías necesarias?
-   - ¿Las importaciones siguen un orden lógico (estándar, terceros, locales)?
-   - ¿Se evitan las importaciones con asterisco (*)?
-
+¿Se importan solo las librerías necesarias?
+¿Las importaciones siguen un orden lógico (estándar, terceros, locales)?
+¿Se evitan las importaciones con asterisco (*)?
 5. Seguridad:
-   - ¿Se manejan de forma segura los datos sensibles?
-   - ¿Se validan adecuadamente las entradas del usuario?
-
+¿Se manejan de forma segura los datos sensibles?
+¿Se validan adecuadamente las entradas del usuario?
 6. Eficiencia:
-   - ¿El código utiliza estructuras de datos y algoritmos eficientes?
-   - ¿Se evitan operaciones innecesariamente costosas?
+¿El código utiliza estructuras de datos y algoritmos eficientes?
+¿Se evitan operaciones innecesariamente costosas?
 
-Por favor, analiza el siguiente código y proporciona un informe detallado que incluya:
-
-1. Una evaluación general del cumplimiento de los lineamientos.
-2. Puntos fuertes del código.
-3. Áreas de mejora, con sugerencias específicas.
-4. Ejemplos de cómo se podrían implementar las mejoras sugeridas.
-
-Código a revisar:
-# Inserte aquí el código Python a revisar
+Por favor, analiza el código  ingresado por el usuario y proporciona un informe detallado que incluya:
+Una evaluación del cumplimiento de los lineamientos punto por punto.
+Puntos fuertes del código.
+Áreas de mejora, con sugerencias específicas.
+Ejemplos de cómo se podrían implementar las mejoras sugeridas.
 
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
-</pre></code>
+<pre><code>
 </details>
 
 ¿Por cual marcador hay que reemplazar el texto `# Inserte aquí el código Python a revisar`?
@@ -386,6 +379,7 @@ if __name__ == "__main__":
     logging.info(f"Resultado del procesamiento: {resultado}")
 </pre></code>
 </details>
+
 
 ## 7.5 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
