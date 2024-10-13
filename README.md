@@ -72,17 +72,23 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 ![image](https://github.com/user-attachments/assets/1f968e42-4053-4a55-947b-d75355cb7fef)
 
 ## 6. Configuración del modelo
-Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta.
+Para obtener los mejores resultados, se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta.
 
 **`Indicación del sistema`** o `System Prompt` Es una instrucción predefinida que guía el comportamiento y las respuestas de un modelo de IA generativa. Establece el contexto y las reglas con las que el modelo debe interactuar.
 
 **`Plantilla de indicación`**, `User Prompt` o simplemente `Prompt` es una instrucción o pregunta ingresada por el usuario para interactuar con un modelo de IA generativa. Define la tarea o el tipo de respuesta que el usuario espera recibir del modelo. Vamos a poner en práctica estos conceptos para sacar el máximo provecho de los documentos que necesitamos consultar.
 
-En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`
+En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`.
 
 ![image](https://github.com/user-attachments/assets/d808d285-99f3-4a99-818b-ad66ce33a54f)
 
-Buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
+Luego dar clic en el botón `Clonar` ubicado en el extremo derecho de la pantalla. Se crea un nuevo perfil en el que se pueden cambiar las propiedades del modelo. Esto permite un ahorro significativo de tiempo y esfuerzo porque no será necesario inlcuir en el prompt de la pregunta las mismas instrucciones una y otra vez. Ademas se pueden crear diferentes perfiles para validar el cumplimiento de diferentes lineamientos.
+
+Modificar el texto en la casilla `Nombre` para que muestre `Llama 3 8B Instruct General`
+
+![image](https://github.com/user-attachments/assets/cc5482b0-ea52-4233-a82a-98ea9237ac78)
+
+Buscar mas abajo la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
 ```
 ### System:
 Eres un asistente AI especializado en proporcionar información basada únicamente en documentos locales (localdocs). Tu tarea es responder preguntas y realizar análisis utilizando exclusivamente la información contenida en estos documentos. No debes utilizar ningún conocimiento externo o información que no esté presente en los localdocs.
@@ -200,7 +206,7 @@ El reclamo del cliente es el siguiente:
 ### 7.4 Reto: Validar cumplimiento de lineamientos en código Python
 Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template, dividirlo y agregar el correspondiente en las propiedades `Indicación del sistema` (System Prompt) y `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en GPT4all se valide si se cumplen los lineamientos de la organización.
 
-Prompt templae:
+**Prompt template:**
 ```
 Eres un experto revisor de código Python. Tu tarea es analizar el siguiente script de Python y verificar si cumple con los lineamientos de nuestra organización. Presta especial atención a los siguientes aspectos:
 
