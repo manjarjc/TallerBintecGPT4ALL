@@ -185,7 +185,7 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 **Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año**
 
 ## 7.3 Reto: Construir un prompt para presentar reclamos
-Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt y pegarlo en `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
+Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt que instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales` y pegarlo en `Plantilla de indicación`.
 
 GPT44all debe responder con solo ingresar el siguiente reclamo
 ```
@@ -195,8 +195,8 @@ Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está def
 
 <details>
   <summary>:eye:</summary>
+  <p>Crear un nuevo perfil para el modelo `Llama 3 8B Instruct`. EN nombre agregar al final 'PQR', luego en `Plantilla de indicación` agregar el siguiente prompt:</p>
 <pre><code>
-<|start_header_id|>user<|end_header_id|>
 Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cliente. La respuesta debe considerar los siguientes puntos:
 1. Derechos del consumidor: Indica qué derechos específicos tiene el cliente según la normativa presentada en el documento en caso de recibir un producto defectuoso.
 2. Proceso de reclamo: Describe el proceso que debe seguir el cliente para formalizar su reclamo y qué tiempos y procedimientos se deben cumplir por parte de la empresa para resolver el problema, de acuerdo con las políticas establecidas en el documento.
@@ -206,16 +206,15 @@ Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cl
 Asegúrate de citar textualmente las secciones aplicables del documento cuando sea necesario para respaldar la respuesta.
 El reclamo del cliente es el siguiente:
 %1
-<|eot_id|><|start_header_id|>assistant<|end_header_id|>
-%2<|eot_id|>
 </pre></code>
 </details>
 
 ### 7.4 Reto: Validar cumplimiento de lineamientos en código Python
-Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template, dividirlo y agregar el correspondiente en las propiedades `Indicación del sistema` (System Prompt) y `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en GPT4all se valide si se cumplen los lineamientos de la organización.
+Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar que parte agregar la propiedades `Indicación del sistema` (System Prompt) y que parte va en `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
 
-**Prompt template:**
-```
+<details>
+  <summary>Clic para mostrar el Prompt template:</summary>
+<pre><code>
 Eres un experto revisor de código Python. Tu tarea es analizar el siguiente script de Python y verificar si cumple con los lineamientos de nuestra organización. Presta especial atención a los siguientes aspectos:
 
 1. Código limpio:
@@ -255,17 +254,19 @@ Por favor, analiza el siguiente código y proporciona un informe detallado que i
 4. Ejemplos de cómo se podrían implementar las mejoras sugeridas.
 
 Código a revisar:
-
-```python
 # Inserte aquí el código Python a revisar
-```
+
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
-```
+</pre></code>
+</details>
 
-Por cual marcador hay que reemplazar el texto `# Inserte aquí el código Python a revisar`?
+¿Por cual marcador hay que reemplazar el texto `# Inserte aquí el código Python a revisar`?
 
-A continuación dos fragmentos de código Python para hacer las pruebas
-```
+Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ellos cumple con los lineamientos?:
+
+<details>
+  <summary>Mostrar fragmento#1 de código Python para pruebas</summary>
+<pre><code>
 from math import *
 import random, sys, os
 
@@ -292,9 +293,12 @@ if __name__ == "__main__":
   student = {'n': 'John Doe', 'g': [8.5, 9, 7.8, 9.2, 8.7]}
   r = do_stuff(student)
   print(r)
-```
+</pre></code>
+</details>
 
-```
+<details>
+  <summary>Mostrar fragmento#2 de código Python para pruebas</summary>
+<pre><code>
 """
 Este módulo proporciona funcionalidades para procesar datos de estudiantes.
 
@@ -380,7 +384,8 @@ if __name__ == "__main__":
     
     resultado = procesar_datos_estudiante(estudiante)
     logging.info(f"Resultado del procesamiento: {resultado}")
-```
+</pre></code>
+</details>
 
 ## 7.5 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
