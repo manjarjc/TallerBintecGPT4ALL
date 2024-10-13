@@ -67,7 +67,9 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 **d. Por último, clic en `Crear Colección`**
 
-## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTÉ ABIERTO`
+**e. GPT4LL empieza a indexar los documentos en la carpeta seleccionada. Esperar hasta que aparezca el texto `Listo` en el extremo derecho de la ventana. A partir de ese momento se podra utilizar la colección en los chats**
+
+## GPT4LL monitorea la carpeta asociada a la colección; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTÉ ABIERTO`
 
 ![image](https://github.com/user-attachments/assets/1f968e42-4053-4a55-947b-d75355cb7fef)
 
@@ -78,6 +80,7 @@ Para obtener los mejores resultados, se deben configurar dos propiedades del mod
 
 **`Plantilla de indicación`**, `User Prompt` o simplemente `Prompt` es una instrucción o pregunta ingresada por el usuario para interactuar con un modelo de IA generativa. Define la tarea o el tipo de respuesta que el usuario espera recibir del modelo. Vamos a poner en práctica estos conceptos para sacar el máximo provecho de los documentos que necesitamos consultar.
 
+### 6.1 Crear un perfil para el modelo
 En GPT4ALL, en el panel de la izquierda clic en `Config` luego clic en `Modelo` y seleccionar `Llama 3 8B Instruct`.
 
 ![image](https://github.com/user-attachments/assets/d808d285-99f3-4a99-818b-ad66ce33a54f)
@@ -88,7 +91,9 @@ Modificar el texto en la casilla `Nombre` para que muestre `Llama 3 8B Instruct 
 
 ![image](https://github.com/user-attachments/assets/cc5482b0-ea52-4233-a82a-98ea9237ac78)
 
-Buscar mas abajo la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
+### 6.2 Modificar el template del prompt por defecto para el modelo
+Para el perfil creado en el punto 6.1, buscar la propiedad `Indicación del sistema`, borrar el contenido y agregar el siguiente texto:
+
 ```
 ### System:
 Eres un asistente AI especializado en proporcionar información basada únicamente en documentos locales (localdocs). Tu tarea es responder preguntas y realizar análisis utilizando exclusivamente la información contenida en estos documentos. No debes utilizar ningún conocimiento externo o información que no esté presente en los localdocs.
@@ -116,15 +121,17 @@ Instrucciones para el asistente:
 5. Cita la fuente específica del documento local para cada pieza de información que proporciones.
 ```
 
-**Porque hay un %1 en el prompt?**
+**¿Porque hay un %1 en el prompt?**
 - %1 se usa como marcador de posición para el contenido de la pregunta del usuario.
 - %2 se usa como marcador de posición para el contenido de la respuesta del modelo.
 
 Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
 
-**Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes. Mas adelante podremos comparar las respuestas con y sin los prompts anteriores**
+:exclamation:**Los prompts proporcionados son una receta genérica que funciona muy bien con el modelo `Llama 3 8B Instruct; tambien debería funcionar con modelos de la familia `Instruct`. Mas adelante podremos comparar las respuestas con y sin la configuración que se acaba de realizar**
 
-## 7. Casos de uso de Documentos Locales
+## 7. Casos de uso de Documentos Locales en conjunto con prompt templates
+
+:warning: **A menos que se indique lo contrario, al crear un nuevo chat seleccionar en modelo `Llama 3 8B Instruct General`**
 
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
 Se deben seguir los pasos del numeral `5.1.1` para crear la colección `Transito` utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
@@ -132,7 +139,7 @@ Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/
 
 ### a. En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+ Nuevo Chat`
 
-### b. Ahora seleccionar el modelo `Llama 3 8B instruct` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`
+### b. Ahora seleccionar el modelo `Llama 3 8B Instruct General` y dar clic en `DocumentosLocales` para seleccionar la colección `Transito`
 
 ![image](https://github.com/user-attachments/assets/6831714b-996f-4030-9037-9cb51aab142e)
 
@@ -169,7 +176,7 @@ Observamos que la respuesta no dice de forma explicita si realmente se utilizó 
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
 
-Crear un nuevo chat, seleccionar el modelo `Llama 3 8B Instruct` y hacer la siguiente pregunta:
+Esperar que e termine de indexar el pdf, crear un nuevo chat y hacer la siguiente pregunta:
 ```
 De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
 ```
