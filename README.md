@@ -32,7 +32,7 @@ Objetivos:
 ## 5.1 Descarga de modelos
 Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+ Agregar Modelo`
 
-![image](https://github.com/user-attachments/assets/56523a9e-2b8e-4f25-9bea-6262f85195e4)
+![image](https://github.com/user-attachments/assets/1c125e1e-c9fe-470c-9af0-77fb4782fe9b)
 
 **Buscar el modelo en la lista y dar clic en `Instalar`. La descarga puede tardar varias horas dependiendo del tamaño**
 
@@ -41,7 +41,7 @@ Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que
 
 `Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
 
-![image](https://github.com/user-attachments/assets/32bd2ea5-c147-4c57-b80f-33c67b31dad0)
+![image](https://github.com/user-attachments/assets/86d064d5-37b8-4806-ba60-a4b5880f39e1)
 
 `Doc Locales` permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
 
@@ -69,7 +69,7 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 ## GPT4LL empieza a indexar los documentos en la carpeta seleccionada. A partir de este momento, GPT4ALL monitorea la carpeta; si se eliminan o agregan documentos la colección se actualiza automáticamente `MIENTRAS GPT4LL ESTÉ ABIERTO`
 
-![image](https://github.com/user-attachments/assets/c6aa3641-9f27-4b04-83eb-3816f5d3777d)
+![image](https://github.com/user-attachments/assets/1f968e42-4053-4a55-947b-d75355cb7fef)
 
 ## 6. Configuración del modelo
 Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
