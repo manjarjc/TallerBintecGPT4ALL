@@ -118,10 +118,10 @@ Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/w
 
 **Los prompts anteriores son una receta generica que funcionan muy bien con el modelo `Llama 3 8B Instruct` pero no necesariamente con modelos diferentes. Mas adelante podremos comparar las respuestas con y sin los prompts anteriores**
 
-## 7. Casos de uso
+## 7. Casos de uso de Documentos Locales
 
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
-Se deben seguir los pasos del numeral `5.1.1` para crear la colección "Transito" utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
+Se deben seguir los pasos del numeral `5.1.1` para crear la colección `Transito` utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
 Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5557)
 
 ### a. En el panel de la izquierda dar clic en `Chats`, luego dar clic en `+ Nuevo Chat`
@@ -143,13 +143,22 @@ Cuáles son las sanciones por no portar un seguro obligatorio vigente (SOAT)?
 ![image](https://github.com/user-attachments/assets/343de858-c1b8-4226-bede-832666f12738)
 
 ### Por que es importante el prompt que ingresamos en la configuración del modelo?
-Esta es la respuesta sin la configuración realizada en la sección 6, es decir inmediatamente despúes de descargar el modelo
+Esta es la respuesta **sin** la configuración realizada en la sección 6, es decir inmediatamente despúes de descargar el modelo:
 
 ![image](https://github.com/user-attachments/assets/a1cea138-af2c-455c-a33f-071854577206)
 
-Observamos que la respuesta no se generó con información del documento; al buscar en el pdf no encontramos referencias explicitas a sanciones económicas.
+Observamos que la respuesta no dice de forma explicita si realmente se utilizó información del documento; al buscar en la ley 769 de 2002 no encontramos referencias explicitas a sanciones económicas.
 
 ### :parrot:Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
+
+<details>
+  <summary>Haz clic para mostrar otras preguntas</summary>
+<pre><code>
+  ¿﻿En qué circunstancias puede un guardia de tránsito inmovilizar mi vehículo?
+  ¿Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por las autoridades de tránsito?
+  ¿Qué pasos debe seguir un conductor para reportar un accidente y levantar un croquis del incidente de tránsito?  
+</pre></code>
+</details>
 
 ## 7.2 Asesor de finanzas personales
 Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
@@ -161,27 +170,13 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 
 **Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año**
 
-## 7.3 Reto: Construir un prompt para presentar reclamos con Documentos Locales
+## 7.3 Reto: Construir un prompt para presentar reclamos
 Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt y pegarlo en `Plantilla de indicación` donde se instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales`
 
 GPT44all debe responder con solo ingresar el siguiente reclamo
 ```
-Mark Smith
-Director de Relaciones con el Cliente
-Sofa Showroom
-555 Broadway
-Cityland, KS 66214
-Asunto: Sofá roto
-Número de pedido: S-7654
-Estimado Sr. Smith:
 El 1 de octubre de 2023, compré un sofá Plush, modelo número 25811, en el sitio web de Sofa Showroom. Pagué COP $6500000 con mi tarjeta de crédito por el sofá y la entrega. Sofa Showroom entregó el sofá en mi casa el 10 de octubre de 2023.
 Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está defectuoso. Una de las patas se rompió el 30 de octubre de 2023. El sofá está inestable y se balancea cuando me siento en él, por lo que no es cómodo ni relajante. No he usado este sofá de una manera que pueda causar daño alguno. Informé sobre este problema en la página de Servicio al Cliente del sitio web de Sofa Showroom el 5 y 8 de noviembre. Dejé mi correo electrónico y pedí que alguien se pusiera en contacto conmigo, pero nadie me ha respondido.
-Para resolver el problema, me gustaría que su empresa recogiera este sofá de forma gratuita y me reembolsara los $650 que pagué. He adjuntado copias de mis registros, incluyendo mi recibo, factura de entrega y fotos del sofá roto.
-Espero su respuesta y una solución a mi problema. Esperaré hasta el 12 de diciembre de 2023 antes de ponerme en contacto con la oficina de protección al consumidor de mi estado o buscar otra ayuda.
-Por favor, contácteme en la dirección indicada anteriormente o por teléfono al 123-456-7890.
-Atentamente,
-Jane Doe
-Adjuntos: Recibo, Factura de entrega, Fotos
 ```
 
 <details>
