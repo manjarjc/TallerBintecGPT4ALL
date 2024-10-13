@@ -72,7 +72,7 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 ![image](https://github.com/user-attachments/assets/1f968e42-4053-4a55-947b-d75355cb7fef)
 
 ## 6. Configuración del modelo
-Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta. 
+Para obtener los mejores resultados se deben configurar dos propiedades del modelo: `Indicación del sistema` y `Plantilla de indicación` ([prompt](https://www.hostinger.co/tutoriales/prompt-engineering)) que se usarán para chatear con los documentos de la colección creada. Estos cambios permitirán obtener una respuesta detallada que muestra que partes del documento se utilizaron para responder la pregunta.
 
 **`Indicación del sistema`** o `System Prompt` Es una instrucción predefinida que guía el comportamiento y las respuestas de un modelo de IA generativa. Establece el contexto y las reglas con las que el modelo debe interactuar.
 
@@ -198,8 +198,9 @@ El reclamo del cliente es el siguiente:
 </details>
 
 ### 7.4 Reto: Validar cumplimiento de lineamientos en código Python
-Como desarrollador debe validar que el código en lenguaje Python cumple con los siguientes lineamientos establecidos por la organización:
+Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template, dividirlo y agregar el correspondiente en las propiedades `Indicación del sistema` (System Prompt) y `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en GPT4all se valide si se cumplen los lineamientos de la organización.
 
+Prompt templae:
 ```
 Eres un experto revisor de código Python. Tu tarea es analizar el siguiente script de Python y verificar si cumple con los lineamientos de nuestra organización. Presta especial atención a los siguientes aspectos:
 
@@ -244,8 +245,127 @@ Código a revisar:
 ```python
 # Inserte aquí el código Python a revisar
 ```
-
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
+```
+
+Por cual marcador hay que reemplazar el texto `# Inserte aquí el código Python a revisar`?
+
+A continuación dos fragmentos de código Python para hacer las pruebas
+```
+from math import *
+import random, sys, os
+
+def f(x):
+  return sum(x)/len(x)
+
+def g(y):
+  if y >= 9: return "A"
+  if y >= 8: return "B"
+  if y >= 6: return "C"
+  return "F"
+
+def do_stuff(d):
+  try:
+    n = d['n']
+    g = d['g']
+    a = f(g)
+    s = g(a)
+    return {'n': n, 'a': a, 's': s}
+  except:
+    print("Error")
+
+if __name__ == "__main__":
+  student = {'n': 'John Doe', 'g': [8.5, 9, 7.8, 9.2, 8.7]}
+  r = do_stuff(student)
+  print(r)
+```
+
+```
+"""
+Este módulo proporciona funcionalidades para procesar datos de estudiantes.
+
+Incluye funciones para calcular el promedio de calificaciones y determinar
+el estado académico de los estudiantes.
+"""
+
+import logging
+from typing import List, Dict, Union
+
+# Configuración del logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def calcular_promedio(calificaciones: List[float]) -> float:
+    """
+    Calcula el promedio de una lista de calificaciones.
+
+    Args:
+        calificaciones (List[float]): Lista de calificaciones numéricas.
+
+    Returns:
+        float: El promedio de las calificaciones.
+
+    Raises:
+        ValueError: Si la lista de calificaciones está vacía.
+    """
+    try:
+        return sum(calificaciones) / len(calificaciones)
+    except ZeroDivisionError:
+        logging.error("Se intentó calcular el promedio de una lista vacía de calificaciones.")
+        raise ValueError("La lista de calificaciones no puede estar vacía.")
+
+def determinar_estado_academico(promedio: float) -> str:
+    """
+    Determina el estado académico basado en el promedio de calificaciones.
+
+    Args:
+        promedio (float): El promedio de calificaciones del estudiante.
+
+    Returns:
+        str: El estado académico del estudiante.
+    """
+    if promedio >= 9.0:
+        return "Excelente"
+    elif promedio >= 8.0:
+        return "Bueno"
+    elif promedio >= 6.0:
+        return "Regular"
+    else:
+        return "Necesita mejorar"
+
+def procesar_datos_estudiante(datos_estudiante: Dict[str, Union[str, List[float]]]) -> Dict[str, Union[str, float]]:
+    """
+    Procesa los datos de un estudiante y calcula su estado académico.
+
+    Args:
+        datos_estudiante (Dict[str, Union[str, List[float]]]): Diccionario con los datos del estudiante.
+
+    Returns:
+        Dict[str, Union[str, float]]: Diccionario con el nombre, promedio y estado académico del estudiante.
+    """
+    try:
+        nombre = datos_estudiante['nombre']
+        calificaciones = datos_estudiante['calificaciones']
+        
+        promedio = calcular_promedio(calificaciones)
+        estado = determinar_estado_academico(promedio)
+        
+        return {
+            'nombre': nombre,
+            'promedio': round(promedio, 2),
+            'estado': estado
+        }
+    except KeyError as e:
+        logging.error(f"Datos del estudiante incompletos: {e}")
+        raise ValueError(f"Los datos del estudiante deben incluir 'nombre' y 'calificaciones'. Falta: {e}")
+
+if __name__ == "__main__":
+    estudiante = {
+        'nombre': 'Ana García',
+        'calificaciones': [8.5, 9.0, 7.8, 9.2, 8.7]
+    }
+    
+    resultado = procesar_datos_estudiante(estudiante)
+    logging.info(f"Resultado del procesamiento: {resultado}")
 ```
 
 ## 7.5 Reto: Validar cumplimiento de lineamientos en código SQL
