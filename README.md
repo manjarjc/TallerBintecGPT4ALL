@@ -152,7 +152,7 @@ Observamos que la respuesta no dice de forma explicita si realmente se utilizó 
 ### :parrot:Que otras preguntas se te ocurren que requieran consultar la norma de tránsito?
 
 <details>
-  <summary>Haz clic para mostrar otras preguntas</summary>
+  <summary>:eye:</summary>
 <pre><code>
   ¿﻿En qué circunstancias puede un guardia de tránsito inmovilizar mi vehículo?
   ¿Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por las autoridades de tránsito?
@@ -180,7 +180,7 @@ Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está def
 ```
 
 <details>
-  <summary>Haz clic para mostrar la respuesta</summary>
+  <summary>:eye:</summary>
 <pre><code>
 <|start_header_id|>user<|end_header_id|>
 Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cliente. La respuesta debe considerar los siguientes puntos:
@@ -197,7 +197,58 @@ El reclamo del cliente es el siguiente:
 </pre></code>
 </details>
 
-## 7.4 Reto: Validar cumplimiento de lineamientos en código SQL
+### 7.4 Reto: Validar cumplimiento de lineamientos en código Python
+Como desarrollador debe validar que el código en lenguaje Python cumple con los siguientes lineamientos establecidos por la organización:
+
+```
+Eres un experto revisor de código Python. Tu tarea es analizar el siguiente script de Python y verificar si cumple con los lineamientos de nuestra organización. Presta especial atención a los siguientes aspectos:
+
+1. Código limpio:
+   - ¿El código es legible y fácil de entender?
+   - ¿Se utilizan nombres descriptivos para variables, funciones y clases?
+   - ¿El código sigue una estructura lógica y coherente?
+
+2. Buenas prácticas:
+   - ¿Se siguen las convenciones de estilo de PEP 8?
+   - ¿Se utilizan estructuras de control apropiadas?
+   - ¿Se manejan adecuadamente los errores y excepciones?
+   - ¿Se evita la duplicación de código?
+
+3. Documentación:
+   - ¿Existe un docstring para el módulo, funciones y clases?
+   - ¿Los comentarios son claros y útiles, explicando el "por qué" en lugar del "qué"?
+   - ¿Se incluye información sobre los parámetros de entrada y valores de retorno en las funciones?
+
+4. Importación de librerías:
+   - ¿Se importan solo las librerías necesarias?
+   - ¿Las importaciones siguen un orden lógico (estándar, terceros, locales)?
+   - ¿Se evitan las importaciones con asterisco (*)?
+
+5. Seguridad:
+   - ¿Se manejan de forma segura los datos sensibles?
+   - ¿Se validan adecuadamente las entradas del usuario?
+
+6. Eficiencia:
+   - ¿El código utiliza estructuras de datos y algoritmos eficientes?
+   - ¿Se evitan operaciones innecesariamente costosas?
+
+Por favor, analiza el siguiente código y proporciona un informe detallado que incluya:
+
+1. Una evaluación general del cumplimiento de los lineamientos.
+2. Puntos fuertes del código.
+3. Áreas de mejora, con sugerencias específicas.
+4. Ejemplos de cómo se podrían implementar las mejoras sugeridas.
+
+Código a revisar:
+
+```python
+# Inserte aquí el código Python a revisar
+```
+
+Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
+```
+
+## 7.5 Reto: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
