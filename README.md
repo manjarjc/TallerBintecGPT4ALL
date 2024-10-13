@@ -134,6 +134,8 @@ Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/w
 
 :warning: **A menos que se indique lo contrario, al crear un nuevo chat seleccionar en modelo `Llama 3 8B Instruct General`**
 
+:information_source: **Utilizar el botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) para copiar el código o texto.**
+
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
 Se deben seguir los pasos del numeral `5.1.1` para crear la colección `Transito` utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
 Tambien puede descargar el archivo de [aquí](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5557)
@@ -209,8 +211,8 @@ El reclamo del cliente es el siguiente:
 </pre></code>
 </details>
 
-### 7.4 Reto: Validar cumplimiento de lineamientos en código Python
-Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar que parte agregar la propiedades `Indicación del sistema` (System Prompt) y que parte va en `Plantilla de indicación` (User Prompt) de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
+### 7.4 Reto opcional: Validar cumplimiento de lineamientos en código Python
+Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo: en `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt); de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
 
 <details>
   <summary>Clic para mostrar el Prompt template</summary>
@@ -243,23 +245,23 @@ Instrucciones para validar cumplimiento de los lineamientos:
 ¿El código utiliza estructuras de datos y algoritmos eficientes?
 ¿Se evitan operaciones innecesariamente costosas?
 
-Por favor, analiza el código  ingresado por el usuario y proporciona un informe detallado que incluya:
+Por favor, analiza el código ingresado por el usuario y proporciona un informe detallado que incluya:
 Una evaluación del cumplimiento de los lineamientos punto por punto.
 Puntos fuertes del código.
 Áreas de mejora, con sugerencias específicas.
 Ejemplos de cómo se podrían implementar las mejoras sugeridas.
 
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
-<pre><code>
+</pre></code>
 </details>
-
-¿Por cual marcador hay que reemplazar el texto `# Inserte aquí el código Python a revisar`?
 
 Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ellos cumple con los lineamientos?:
 
 <details>
   <summary>Mostrar fragmento#1 de código Python para pruebas</summary>
 <pre><code>
+````
+```
 from math import *
 import random, sys, os
 
@@ -286,12 +288,16 @@ if __name__ == "__main__":
   student = {'n': 'John Doe', 'g': [8.5, 9, 7.8, 9.2, 8.7]}
   r = do_stuff(student)
   print(r)
+```
+````
 </pre></code>
 </details>
 
 <details>
   <summary>Mostrar fragmento#2 de código Python para pruebas</summary>
 <pre><code>
+````
+```
 """
 Este módulo proporciona funcionalidades para procesar datos de estudiantes.
 
@@ -377,16 +383,20 @@ if __name__ == "__main__":
     
     resultado = procesar_datos_estudiante(estudiante)
     logging.info(f"Resultado del procesamiento: {resultado}")
+```
+````
 </pre></code>
 </details>
 
 
-## 7.5 Reto: Validar cumplimiento de lineamientos en código SQL
+## 7.5 Reto opcional: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
 
-```
+<details>
+  <summary>Clic para mostrar lineamientos</summary>
+<pre><code>
 1. Organización y Estructura del Código
    - Nombres descriptivos:
      - Usa nombres claros y representativos para procedimientos y parámetros.
@@ -503,10 +513,15 @@ Formato para uso en Prompts:
      IF input IS NULL THEN
        RAISE EXCEPTION 'El parámetro no puede ser NULL';
      END IF;
-```
+</pre></code>
+</details>
 
 A continuación el procedimiento almacenado de PostgreSQL que se debe validar si cumple los lineamientos de la organización:
 
+<details>
+  <summary>Clic para mostrar el procemiento almacenado</summary>
+<pre><code>
+````
 ```
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
 DECLARE 
@@ -543,9 +558,12 @@ BEGIN
 
 END $$ LANGUAGE plpgsql;
 ```
+````
+</pre></code>
+</details>
 
 
-# Fuentes consultadas
+## Fuentes consultadas
 - :link:[Documentos Locales](https://docs.gpt4all.io/gpt4all_desktop/localdocs.html)
 - :link:[Configuring Custom Models](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models)
 - :link:[The 6 Best LLM Tools To Run Models Locally](https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd)
