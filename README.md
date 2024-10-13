@@ -16,6 +16,7 @@ Objetivos:
 - Acceso a una amplia variedad de modelos
 - No requiere acceso a internet 
 - No requiere hardware de altas prestaciones
+- Amigable con el ambiente. [Los servicios de IA Generativa en línea aumentan el consumo de agua y electricidad](https://es.wired.com/articulos/la-cantidad-de-agua-y-electricidad-que-usa-chatgpt-esta-fuera-de-control#:~:text=Por%20ejemplo%2C%20en%20Texas%2C%20ChatGPT,y%20medio%2C%20por%20correo%20electr%C3%B3nico.)
 
 ## 3 Desventajas
 - El prompt debe ser más detallado 
