@@ -7,7 +7,7 @@ Objetivos:
 - Resolver diferentes retos que permitiran adquirir destrezas en obtener respuestas de información en documentos locales
 
 ## 1. GPT4ALL
-[GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops. La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/gpt4all_desktop/quickstart.html) se hace de acuerdo al sistema operativo de su PC o laptop
+[GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops. La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/index.html) se hace de acuerdo al sistema operativo de su PC o laptop
 
 ![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
