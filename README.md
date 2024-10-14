@@ -1,4 +1,4 @@
-# Esta es la guía para el evento Bintec de Bancolombia 2024:
+# ![image](https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8) Esta es la guía para el evento Bintec de Bancolombia 2024:
 ## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
 Objetivos:
@@ -40,7 +40,7 @@ Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+
 ## 5.1 Doc Locales (localdocs)
 Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los modelos captar y utilizar la información de forma más contextual y precisa.
 
-`Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation). Esta es una explicación super sencilla pero suficiente para lo que necesitamos hacer.
+`Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation).
 
 ![image](https://github.com/user-attachments/assets/86d064d5-37b8-4806-ba60-a4b5880f39e1)
 
