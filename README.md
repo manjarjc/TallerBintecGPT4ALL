@@ -173,7 +173,7 @@ Observamos que la respuesta no dice de forma explicita si realmente se utilizó 
   ¿﻿En qué circunstancias puede un guardia de tránsito inmovilizar mi vehículo?
   ¿Qué debe hacer un conductor en caso de que su vehículo sea inmovilizado por las autoridades de tránsito?
   ¿Qué pasos debe seguir un conductor para reportar un accidente y levantar un croquis del incidente de tránsito?  
-</pre></code>
+</code></pre>
 </details>
 
 ## 7.2 Asesor de finanzas personales
@@ -204,14 +204,13 @@ Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cl
 2. Proceso de reclamo: Describe el proceso que debe seguir el cliente para formalizar su reclamo y qué tiempos y procedimientos se deben cumplir por parte de la empresa para resolver el problema, de acuerdo con las políticas establecidas en el documento.
 3. Soluciones posibles: Menciona las opciones que la empresa debe ofrecer al cliente (como reparación, reemplazo o reembolso) en conformidad con los criterios y estándares normativos del documento.
 4. Busca información relevante únicamente en los documentos locales proporcionados.
-
 Asegúrate de citar textualmente las secciones aplicables del documento cuando sea necesario para respaldar la respuesta.
 El reclamo del cliente es el siguiente:
 %1
-</pre></code>
+</code></pre>
 </details>
 
-### 7.4 Reto opcional: Validar cumplimiento de lineamientos en código Python
+## 7.4 Reto opcional: Validar cumplimiento de lineamientos en código Python
 Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo: en `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt); de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
 
 <details>
@@ -252,7 +251,7 @@ Puntos fuertes del código.
 Ejemplos de cómo se podrían implementar las mejoras sugeridas.
 
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
-</pre></code>
+</code></pre>
 </details>
 
 Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ellos cumple con los lineamientos?:
@@ -260,7 +259,6 @@ Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ello
 <details>
   <summary>Mostrar fragmento#1 de código Python para pruebas</summary>
 <pre><code>
-````
 ```
 from math import *
 import random, sys, os
@@ -288,15 +286,12 @@ if __name__ == "__main__":
   student = {'n': 'John Doe', 'g': [8.5, 9, 7.8, 9.2, 8.7]}
   r = do_stuff(student)
   print(r)
-```
-````
-</pre></code>
+</code></pre>
 </details>
 
 <details>
   <summary>Mostrar fragmento#2 de código Python para pruebas</summary>
 <pre><code>
-````
 ```
 """
 Este módulo proporciona funcionalidades para procesar datos de estudiantes.
@@ -383,9 +378,7 @@ if __name__ == "__main__":
     
     resultado = procesar_datos_estudiante(estudiante)
     logging.info(f"Resultado del procesamiento: {resultado}")
-```
-````
-</pre></code>
+</code></pre>
 </details>
 
 
@@ -513,7 +506,7 @@ Formato para uso en Prompts:
      IF input IS NULL THEN
        RAISE EXCEPTION 'El parámetro no puede ser NULL';
      END IF;
-</pre></code>
+</code></pre>
 </details>
 
 A continuación el procedimiento almacenado de PostgreSQL que se debe validar si cumple los lineamientos de la organización:
@@ -521,7 +514,6 @@ A continuación el procedimiento almacenado de PostgreSQL que se debe validar si
 <details>
   <summary>Clic para mostrar el procemiento almacenado</summary>
 <pre><code>
-````
 ```
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
 DECLARE 
@@ -557,9 +549,7 @@ BEGIN
     END IF;    
 
 END $$ LANGUAGE plpgsql;
-```
-````
-</pre></code>
+</code></pre>
 </details>
 
 
