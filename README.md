@@ -2,9 +2,9 @@
 ## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
 Objetivos:
-- Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles
-- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales
-- Resolver diferentes retos que permitiran adquirir destrezas en obtener respuestas de información en documentos locales
+- Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles. <a href="https://es.wired.com/articulos/la-cantidad-de-agua-y-electricidad-que-usa-chatgpt-esta-fuera-de-control#:~:text=Por%20ejemplo%2C%20en%20Texas%2C%20ChatGPT,y%20medio%2C%20por%20correo%20electr%C3%B3nico" target="_blank">Visita este enlace</a>
+- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales.
+- Resolver diferentes retos que permitirán adquirir destrezas en obtener respuestas de información en documentos locales.
 
 ## 1. GPT4ALL
 [GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops. La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/index.html) se hace de acuerdo al sistema operativo de su PC o laptop
@@ -12,16 +12,16 @@ Objetivos:
 ![image](https://github.com/user-attachments/assets/ce10ac04-42db-408f-89bc-d451fb7dec09)
 
 ## 2 Ventajas
-- Privacidad de la información 
-- Acceso a una amplia variedad de modelos
-- No requiere acceso a internet 
-- No requiere hardware de altas prestaciones
+- Privacidad de la información.
+- Acceso a una amplia variedad de modelos.
+- No requiere acceso a internet.
+- No requiere hardware de altas prestaciones.
 - Amigable con el ambiente. [Los servicios de IA Generativa en línea aumentan el consumo de agua y electricidad](https://es.wired.com/articulos/la-cantidad-de-agua-y-electricidad-que-usa-chatgpt-esta-fuera-de-control#:~:text=Por%20ejemplo%2C%20en%20Texas%2C%20ChatGPT,y%20medio%2C%20por%20correo%20electr%C3%B3nico.)
 
 ## 3 Desventajas
-- El prompt debe ser más detallado 
-- Hay modelos que requieren 16GB o más de RAM 
-- Mas lento para responder
+- La pregunta debe ser más detallada.
+- Hay modelos que requieren 16GB o más de RAM.
+- Mas lento para responder.
 
 ## 4 Requerimientos
 - Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5 o similar.
