@@ -1,12 +1,12 @@
 # ![image](https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8) Esta es la guía para el evento Bintec de Bancolombia 2024:
 ## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
-Objetivos:
+### Objetivos:
 - Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles.
 - Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales.
 - Resolver diferentes retos que permitirán adquirir destrezas en obtener respuestas de información en documentos locales.
 
-## Convenciones utilizadas en este documento
+### Convenciones utilizadas en este documento
 - `Texto sombreado` se utiliza para resaltar opciones o propiedades de la aplicación GPT4all. Tambien para resaltar palabras clave en el contexto de este taller.
 - Cuando vea este botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) es porque puede copiar el código o texto del recuadro sin tener que seleccionarlo.
 
@@ -51,7 +51,7 @@ Doc Locales es una característica que permite guardar los archivos de una carpe
 `Doc Locales` permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
 
 **Recomendaciones**
-- No guardar archivos de diferentes temas o areas en la misma carpeta. Por organización se debe crear una carpeta por área de búsqueda
+- No guardar archivos de diferentes temas o áreas en la misma carpeta. Por organización se debe crear una carpeta por área de búsqueda
 - Solo guardar en la carpeta los documentos relevantes. Mas documentos implica un aumento de tamaño en la base de datos vectorial que ralentizará las respuestas. Aquí es más importante la calidad que la cantidad
 - Por defecto solo se indexarán archivos con extensiones **txt,pdf,md,rst**
 
@@ -62,7 +62,7 @@ En primer lugar se debe crear una carpeta en disco, en cualquier ruta. Copiar en
 
 ![image](https://github.com/user-attachments/assets/16a31503-aa12-4150-b393-50cc66464970)
 
-**b. Clic en `+Agregar colección de documentos` o en `+ Agregar colección`.**
+**b. Clic en `+ Agregar colección de documentos` o en `+ Agregar colección`.**
 
 ![image](https://github.com/user-attachments/assets/542cabb4-3b14-423b-90a9-6609125506ec)
 
