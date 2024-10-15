@@ -258,9 +258,9 @@ Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando e
 Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ellos cumple con los lineamientos?:
 
 <details>
-  <summary>Mostrar fragmento#1 de código Python para pruebas</summary>
-<pre><code>
-```
+  <summary>Clic para mostrar Fragmento#1 de código Python para pruebas</summary>
+
+```python
 from math import *
 import random, sys, os
 
@@ -287,13 +287,14 @@ if __name__ == "__main__":
   student = {'n': 'John Doe', 'g': [8.5, 9, 7.8, 9.2, 8.7]}
   r = do_stuff(student)
   print(r)
-</code></pre>
+```
+
 </details>
 
 <details>
-  <summary>Mostrar fragmento#2 de código Python para pruebas</summary>
-<pre><code>
-```
+  <summary>Clic para mostrar fragmento#2 de código Python para pruebas</summary></summary>
+
+```python
 """
 Este módulo proporciona funcionalidades para procesar datos de estudiantes.
 
@@ -379,9 +380,9 @@ if __name__ == "__main__":
     
     resultado = procesar_datos_estudiante(estudiante)
     logging.info(f"Resultado del procesamiento: {resultado}")
-</code></pre>
-</details>
+```
 
+</details>
 
 ## 7.5 Reto opcional: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
@@ -390,7 +391,8 @@ Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son l
 
 <details>
   <summary>Clic para mostrar lineamientos</summary>
-<pre><code>
+
+```
 1. Organización y Estructura del Código
    - Nombres descriptivos:
      - Usa nombres claros y representativos para procedimientos y parámetros.
@@ -507,15 +509,16 @@ Formato para uso en Prompts:
      IF input IS NULL THEN
        RAISE EXCEPTION 'El parámetro no puede ser NULL';
      END IF;
-</code></pre>
+```
+
 </details>
 
 A continuación el procedimiento almacenado de PostgreSQL que se debe validar si cumple los lineamientos de la organización:
 
 <details>
   <summary>Clic para mostrar el procemiento almacenado</summary>
-<pre><code>
-```
+
+```sql
 CREATE OR REPLACE PROCEDURE delete_transactions(max_records INT) AS $$
 DECLARE 
     deleted_event INTEGER := 0;
@@ -550,7 +553,8 @@ BEGIN
     END IF;    
 
 END $$ LANGUAGE plpgsql;
-</code></pre>
+```
+
 </details>
 
 
