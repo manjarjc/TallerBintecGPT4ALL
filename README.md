@@ -2,9 +2,13 @@
 ## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
 Objetivos:
-- Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles. <a href="https://es.wired.com/articulos/la-cantidad-de-agua-y-electricidad-que-usa-chatgpt-esta-fuera-de-control#:~:text=Por%20ejemplo%2C%20en%20Texas%2C%20ChatGPT,y%20medio%2C%20por%20correo%20electr%C3%B3nico" target="_blank">Visita este enlace</a>
+- Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles.
 - Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales.
 - Resolver diferentes retos que permitirán adquirir destrezas en obtener respuestas de información en documentos locales.
+
+## Convenciones utilizadas en este documento
+- `Texto sombreado` se utiliza para resaltar opciones o propiedades de la aplicación GPT4all. Tambien para resaltar palabras clave en el contexto de este taller.
+- Cuando vea este botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) es porque puede copiar el código o texto del recuadro sin tener que seleccionarlo.
 
 ## 1. GPT4ALL
 [GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops. La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/index.html) se hace de acuerdo al sistema operativo de su PC o laptop
@@ -38,9 +42,9 @@ Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+
 **Buscar el modelo en la lista y dar clic en `Instalar`. La descarga puede tardar varias horas dependiendo del tamaño**
 
 ## 5.1 Doc Locales (localdocs)
-Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero puede dar lugar a lagunas en áreas de conocimiento específicas. A veces, incluso pueden producir información desviada o sesgada, un subproducto del aprendizaje a partir de una web vasta y sin filtrar. Para solucionar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan datos en un formato único conocido como «incrustación vectorial» (vector embeddings), que permite a los modelos captar y utilizar la información de forma más contextual y precisa.
+Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero también puede generar lagunas en áreas de conocimiento específicas. A veces, esto puede resultar en información sesgada, un subproducto del aprendizaje a partir de una web extensa y sin filtrar. Para abordar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan la información en un formato denominado «incrustación vectorial» (vector embeddings), lo que permite a los modelos captar y utilizar la información de manera más contextual y precisa.
 
-`Doc Locales` es una caracteristica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local que posteriormente utiliza un modelo que se ejecuta en GPT4ALL para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para responder preguntas se conoce como RAG (Retrieval-Augmented Generation).
+Doc Locales es una característica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local. Luego, un modelo que se ejecuta en GPT4ALL utiliza esta base de datos para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para generar respuestas se conoce como RAG (Retrieval-Augmented Generation). Esta explicación es sencilla, pero adecuada para lo que necesitamos.
 
 ![image](https://github.com/user-attachments/assets/86d064d5-37b8-4806-ba60-a4b5880f39e1)
 
@@ -128,13 +132,11 @@ Instrucciones para el asistente:
 
 Para mayor información [seguir este link](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models#drafting-the-system-prompt-and-chat-template)
 
-:exclamation:**Los prompts proporcionados son una receta genérica que funciona muy bien con el modelo `Llama 3 8B Instruct; tambien debería funcionar con modelos de la familia `Instruct`. Mas adelante podremos comparar las respuestas con y sin la configuración que se acaba de realizar**
+:exclamation:**Los prompts proporcionados son una receta genérica que funciona muy bien con el modelo `Llama 3 8B Instruct`; tambien debería funcionar con modelos de la familia `Instruct`. Mas adelante podremos comparar las respuestas con y sin la configuración que se acaba de realizar**
 
 ## 7. Casos de uso de Documentos Locales en conjunto con prompt templates
 
 :warning: **A menos que se indique lo contrario, al crear un nuevo chat seleccionar en modelo `Llama 3 8B Instruct General`**
-
-:information_source: **Utilizar el botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) para copiar el código o texto.**
 
 ## 7.1 Creación de un asistente para consultar temas relacionados con el código de tránsito
 Se deben seguir los pasos del numeral `5.1.1` para crear la colección `Transito` utilizando el archivo [código nacional de tránsito](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/transito/ley-769-de-2002-codigo-nacional-de-transito_3704_0.pdf)
