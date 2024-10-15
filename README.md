@@ -179,9 +179,8 @@ Observamos que la respuesta no dice de forma explicita si realmente se utilizó 
 </details>
 
 ## 7.2 Asesor de finanzas personales
-Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf)
+Se debe crear la colección "FinanzasPersonales" y agregar el archivo [finanzas](https://github.com/manjarjc/TallerBintecGPT4ALL/blob/main/documentos/finanzas-personales/reporte_ingresos_egresos_familia_detallado.pdf). Esperar que se termine de indexar el pdf, crear un nuevo chat y hacer la siguiente pregunta:
 
-Esperar que e termine de indexar el pdf, crear un nuevo chat y hacer la siguiente pregunta:
 ```
 De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden recortar para lograr un ahorro del 5%?
 ```
