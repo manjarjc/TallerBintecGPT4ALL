@@ -8,6 +8,7 @@
 
 ### Convenciones utilizadas en este documento
 - `Texto sombreado` se utiliza para resaltar opciones o propiedades de la aplicación GPT4all. Tambien para resaltar palabras clave en el contexto de este taller.
+- Un tringulo negro ![image](https://github.com/user-attachments/assets/debd41d2-0e64-4863-931e-24d88d9ef496) apuntando hacia la derecha indica un texto oculto por defecto. Dar clic para mostrar el texto.
 - Cuando vea este botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) es porque puede copiar el código o texto del recuadro sin tener que seleccionarlo.
 
 ## 1. GPT4ALL
