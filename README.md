@@ -189,9 +189,9 @@ De acuerdo al reporte de ingresos y egresos familiares que gastos se pueden reco
 **Reto: crear un prompt que instruya a GPT4ALL para devolver el total de gastos en entretenimiento para todo el año**
 
 ## 7.3 Reto: Construir un prompt para presentar reclamos
-Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt que instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales` y pegarlo en `Plantilla de indicación`.
+Como consumidor necesito saber cuales son mis derechos y que debo hacer para presentar reclamos haciendo referencia a la norma legal vigente. [Descargar el lineamiento](https://colaboracion.dnp.gov.co/CDT/Programa%20Nacional%20del%20Servicio%20al%20Ciudadano/CRITERIOS%20NORMATIVOS%20PARA%20PQRSD%20V2.pdf) para crear la colección `PQR` que apunte a la carpeta donde se descargó el archivo. Crear un prompt que instruya al modelo para responder reclamos usando única y exclusivamente `Documentos Locales` y pegarlo en `Plantilla de indicación`.
 
-GPT44all debe responder con solo ingresar el siguiente reclamo
+GPT4all debe responder con solo ingresar el siguiente reclamo
 ```
 El 1 de octubre de 2023, compré un sofá Plush, modelo número 25811, en el sitio web de Sofa Showroom. Pagué COP $6500000 con mi tarjeta de crédito por el sofá y la entrega. Sofa Showroom entregó el sofá en mi casa el 10 de octubre de 2023.
 Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está defectuoso. Una de las patas se rompió el 30 de octubre de 2023. El sofá está inestable y se balancea cuando me siento en él, por lo que no es cómodo ni relajante. No he usado este sofá de una manera que pueda causar daño alguno. Informé sobre este problema en la página de Servicio al Cliente del sitio web de Sofa Showroom el 5 y 8 de noviembre. Dejé mi correo electrónico y pedí que alguien se pusiera en contacto conmigo, pero nadie me ha respondido.
@@ -199,7 +199,7 @@ Desafortunadamente, su producto no ha funcionado bien, ya que el sofá está def
 
 <details>
   <summary>:eye:</summary>
-  <p>Crear un nuevo perfil para el modelo `Llama 3 8B Instruct`. EN nombre agregar al final 'PQR', luego en `Plantilla de indicación` agregar el siguiente prompt:</p>
+  <p>Crear un nuevo perfil para el modelo `Llama 3 8B Instruct`. En 'Nombre' agregar al final 'PQR', luego en `Plantilla de indicación` agregar el siguiente prompt:</p>
 <pre><code>
 Proporciona una respuesta detallada a un reclamo que ha sido reportado por un cliente. La respuesta debe considerar los siguientes puntos:
 1. Derechos del consumidor: Indica qué derechos específicos tiene el cliente según la normativa presentada en el documento en caso de recibir un producto defectuoso.
@@ -384,6 +384,8 @@ if __name__ == "__main__":
 ```
 
 </details>
+
+Debes pegar el código anterior en GPT4all encerrado entre ``` y ```
 
 ## 7.5 Reto opcional: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
