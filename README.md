@@ -38,6 +38,7 @@
 - Contar con un PC con al menos 8GB de RAM y un procesador Intel Corei5 o similar.
 - Tener instalado GPT4All 
 - Descargar los modelos `Llama 3 8B Instruct` y `TheBloke/CodeLlama-7B-Instruct-GGUF`. La sección 5.1 muestra como hacer la descarga
+- Si está haciendo el taller presencial y no ha descargado los modelos anteriores, descargar `Llama 3.2 1B Instruct`. No es tan bueno pero es mucho más liviano
 
 ## 5 Configurar GPT4ALL
 
@@ -219,7 +220,7 @@ El reclamo del cliente es el siguiente:
 </details>
 
 ## 7.4 Reto opcional: Validar cumplimiento de lineamientos en código Python
-Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo: en `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt); de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización.
+Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo: en `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt); de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización. Utilizar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`.
 
 <details>
   <summary>Clic para mostrar el Prompt template</summary>
@@ -394,7 +395,7 @@ if __name__ == "__main__":
 Debes pegar el código anterior en GPT4all encerrado entre ``` y ```
 
 ## 7.5 Reto opcional: Validar cumplimiento de lineamientos en código SQL
-Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts
+Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts. Utilizar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`.
 
 Los lineamientos que debe cumplir todo procedimiento almacenado PostgreSQL son los siguientes:
 
