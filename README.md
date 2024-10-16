@@ -229,7 +229,8 @@ Como desarrollador debe validar que el código en lenguaje Python cumple con los
 
 <details>
   <summary>Clic para mostrar el Prompt template</summary>
-<pre><code>
+
+```
 ### System:
 Eres un experto en código de lenguaje Python. Tu tarea es analizar scripts de Python y verificar si cumplen los lineamientos descritos a continuación:
 
@@ -265,11 +266,13 @@ Puntos fuertes del código.
 Ejemplos de cómo se podrían implementar las mejoras sugeridas.
 
 Asegúrate de ser específico en tus comentarios y sugerencias, proporcionando ejemplos concretos de cómo mejorar el código cuando sea necesario.
-</code></pre>
+```
+
 </details>
 
 Ingresar dos fragmentos de código Python para hacer las pruebas. ¿Cual de ellos cumple con los lineamientos?:
 
+Tip: Pega el código en GPT4all encerrado entre tres caracteres acentuados ` ``` `, es decir antes de y después del código para que se muestre correctamente.
 <details>
   <summary>Clic para mostrar Fragmento#1 de código Python para pruebas</summary>
 
@@ -396,8 +399,6 @@ if __name__ == "__main__":
 ```
 
 </details>
-
-Debes pegar el código anterior en GPT4all encerrado entre ``` y ```
 
 ## 7.5 Reto opcional: Validar cumplimiento de lineamientos en código SQL
 Una organización ha dispuesto una serie de lineamientos que los desarrolladores SQL deben seguir al momento de crear procedimientos almacenados para PostgreSQL. Su tarea consiste en determinar la forma de usar GPT4ALL para que revise el código SQL y validar si cumple con los lineamientos establecidos. El reto consiste en determinar si se debe usar Documentos Locales o solo prompts. Utilizar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`.
