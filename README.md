@@ -1,4 +1,10 @@
-# ![image](https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8) Esta es la guía para el evento Bintec de Bancolombia 2024:
+<table style="border: none; border-collapse: collapse;">
+<tr>
+<td><img src="https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8" alt="Seti SAS"></td>
+<td><h1 align="center">Esta es la guía para el evento Bintec de Bancolombia 2024</h1></td>
+</tr>
+</table>
+
 ## Construye tu asistente personal de IA Generativa sin código con CHATGPT4ALL
 
 ### Objetivos:
