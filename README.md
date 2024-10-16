@@ -225,7 +225,7 @@ El reclamo del cliente es el siguiente:
 </details>
 
 ## 7.4 Reto opcional: Validar cumplimiento de lineamientos en código Python
-Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo: en `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt); de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización. Utilizar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`.
+Como desarrollador debe validar que el código en lenguaje Python cumple con los lineamientos establecidos por su organización. El reto consiste en tomar el siguiente prompt template y determinar en que propiedad del modelo ingresarlo. ¿En `Indicación del sistema` (System Prompt) o en `Plantilla de indicación` (User Prompt)? de tal forma que con solo pegar el código python en un chat de GPT4all se válide si se cumplen los lineamientos de la organización. Utilizar el modelo `TheBloke/CodeLlama-7B-Instruct-GGUF`.
 
 <details>
   <summary>Clic para mostrar el Prompt template</summary>
@@ -572,6 +572,24 @@ END $$ LANGUAGE plpgsql;
 
 </details>
 
+<details>
+  <summary>Clic para mostrar el prompt que generó el procemiento almacenado</summary>
+
+Necesito un procedimiento almacenado para borrar registros de dos tablas de una base de datos de PostgreSQL que realice las siguientes tareas:
+1. Definir un parametro de entrada "max_records" que permita establecer la cantidad maxima de registros a eliminar de las dos tablas
+2. Recuperar de la tabla "FACTURA" los registros donde el valor del campo "date" tenga más de 90 días. Devolver el campo "ID"
+3. Si no se devuelven registros en el punto 2 terminar el procedimiento
+4. Iniciar una transaccion antes de iniciar el bucle
+5. Iterar sobre cada uno de los registros devueltos en el punto 2
+6. Eliminar los registros de la tabla "FACTURA" donde el campo "FK_FACTURA_ID" sea igual al campo "ID" del punto 2 y guardar la cantidad de registros eliminados en la variable "deleted_event"
+7. Eliminar el registro de la tabla "FACTURA_DETALLE" donde el valor del campo "ID" que sea igual al campo "ID" del punto 2  y guardar la cantidad de registros eliminados en la variable "deleted_tran"
+8. En cada ciclo, actualizar la variable "total_records_deleted", sumando al valor actual el valor de las variables "deleted_event" y "deleted_tran"
+9. En cada ciclo se debe verificar si el valor de la variable "total_records_deleted" es mayor o igual al parametro de entrada "max_records". Si se cumple la condición finalizar el procedimiento
+10. Confirmar la transacción iniciada en el punto 4
+11. Devolver el valor de la variable "total_records_deleted"
+12. Implementar un control de errores que haga un rollback de transacciones pendientes
+
+</details>
 
 ## Fuentes consultadas
 - :link:[Wiki GPT4all]([https://docs.gpt4all.io/gpt4all_desktop/localdocs.html](https://github.com/nomic-ai/gpt4all/wiki)
