@@ -57,7 +57,7 @@ Doc Locales es una característica que permite guardar los archivos de una carpe
 
 ![image](https://github.com/user-attachments/assets/86d064d5-37b8-4806-ba60-a4b5880f39e1)
 
-`Doc Locales` permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a traves de un chat.
+`Doc Locales` permite crear `Colecciones`. Cada Colección tiene un nombre y la ruta a una carpeta en disco donde se guardan los documentos que se desean consultar a través de un chat.
 
 **Recomendaciones**
 - No guardar archivos de diferentes temas o áreas en la misma carpeta. Por organización se debe crear una carpeta por área de búsqueda
