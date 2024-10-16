@@ -16,6 +16,7 @@
 - `Texto sombreado` se utiliza para resaltar opciones o propiedades de la aplicación GPT4all. Tambien para resaltar palabras clave en el contexto de este taller.
 - Un triángulo negro ![image](https://github.com/user-attachments/assets/debd41d2-0e64-4863-931e-24d88d9ef496) apuntando hacia la derecha indica un texto oculto por defecto. Dar clic para mostrar el texto.
 - Cuando vea este botón ![image](https://github.com/user-attachments/assets/bb4c71db-9bd7-423c-90de-2b4c9b07a4d0) es porque al darle clic puede copiar el código o texto del recuadro sin tener que seleccionarlo.
+- En esta guía se utiliza la palabra "modelo" como sinónimo de [LLM](https://www.salesforce.com/es/blog/generative-ai-glossary/#LLM)
 
 ## 1. GPT4ALL
 [GPT4ALL](https://www.nomic.ai/gpt4all) se basa en los principios de privacidad, seguridad y no-internet. Es una aplicación de escritorio creada por [Nomic](https://www.nomic.ai/) que permite descargar y ejecutar modelos de lenguaje grande (LLM) en la mayoría de equipos de escritorio o Laptops. La [descarga e instalación de GPT4ALL](https://docs.gpt4all.io/index.html) se hace de acuerdo al sistema operativo de su PC o laptop
