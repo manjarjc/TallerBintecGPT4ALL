@@ -1,6 +1,10 @@
 <table style="border: none; border-collapse: collapse;">
 <tr>
-<td><img src="https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8" alt="Seti SAS"></td>
+<td>
+  <a href="https://seti.com.co" target="_blank">
+    <img src="https://github.com/user-attachments/assets/ce1df8cd-15a9-4d5b-a19a-78992c6999f8" alt="Seti SAS">
+  </a>
+</td>
 <td><h1 align="center">Esta es la guía para el evento Bintec de Bancolombia 2024</h1></td>
 </tr>
 </table>
@@ -9,7 +13,7 @@
 
 ### Objetivos:
 - Aprender a chatear con documentos locales usando GPT4ALL sin preocuparse por fuga de datos sensibles.
-- Entender como usar templates de prompts para responder preguntas solo con la información de documentos locales.
+- Entender como usar templates de [prompts](https://www.zendesk.com.mx/blog/que-es-prompt/) para responder preguntas solo con la información de documentos locales.
 - Resolver diferentes retos que permitirán adquirir destrezas en obtener respuestas de información en documentos locales.
 
 ### Convenciones utilizadas en este documento
@@ -53,7 +57,7 @@ Abrir GPT4ALL y en el panel de la izquierda, clic en `Modelos`, luego clic en `+
 ## 5.1 Doc Locales (localdocs)
 Por lo general, los modelos se entrenan con una amplia variedad de datos, lo que les proporciona una comprensión general, pero también puede generar lagunas en áreas de conocimiento específicas. A veces, esto puede resultar en información sesgada, un subproducto del aprendizaje a partir de una web extensa y sin filtrar. Para abordar este problema, se introdujo el concepto de bases de datos vectoriales. Estas bases de datos almacenan la información en un formato denominado «incrustación vectorial» (vector embeddings), lo que permite a los modelos captar y utilizar la información de manera más contextual y precisa.
 
-Doc Locales es una característica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local. Luego, un modelo que se ejecuta en GPT4ALL utiliza esta base de datos para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para generar respuestas se conoce como RAG (Retrieval-Augmented Generation). Esta explicación es sencilla, pero adecuada para lo que necesitamos.
+Doc Locales es una característica que permite guardar los archivos de una carpeta en disco como incrustaciones (embeddings) en una base de datos local. Luego, un modelo que se ejecuta en GPT4ALL utiliza esta base de datos para responder preguntas sobre los documentos. El proceso que consulta la base de datos vectorial para generar respuestas se conoce como [RAG](https://www.promptingguide.ai/es/techniques/rag) (Generación de Recuperación Aumentada). Esta explicación es sencilla, pero adecuada para lo que necesitamos.
 
 ![image](https://github.com/user-attachments/assets/86d064d5-37b8-4806-ba60-a4b5880f39e1)
 
@@ -570,14 +574,14 @@ END $$ LANGUAGE plpgsql;
 
 
 ## Fuentes consultadas
-- :link:[Documentos Locales](https://docs.gpt4all.io/gpt4all_desktop/localdocs.html)
-- :link:[Configuring Custom Models](https://github.com/nomic-ai/gpt4all/wiki/Configuring-Custom-Models)
+- :link:[Wiki GPT4all]([https://docs.gpt4all.io/gpt4all_desktop/localdocs.html](https://github.com/nomic-ai/gpt4all/wiki)
 - :link:[The 6 Best LLM Tools To Run Models Locally](https://medium.com/@amosgyamfi/the-6-best-llm-tools-to-run-models-locally-eedd0f7c2bbd)
 - :link:[¿Quieres comprender qué es RAG y su relación con los LLM y la IA generativa?](https://es.linkedin.com/pulse/quieres-comprender-qu%C3%A9-es-rag-y-su-relaci%C3%B3n-con-los-llm-hern%C3%A1ndez-ley3f)
-- :link:[Prompt Engineering: qué es y 15 técnicas eficaces + consejos]([https://www.promptingguide.ai/es/introduction])
+- :link:[Guía de ingeniería de prompt](https://www.promptingguide.ai/es/introduction)
+- :link:[Los servicios de IA Generativa en línea aumentan el consumo de agua y electricidad](https://es.wired.com/articulos/la-cantidad-de-agua-y-electricidad-que-usa-chatgpt-esta-fuera-de-control#:~:text=Por%20ejemplo%2C%20en%20Texas%2C%20ChatGPT,y%20medio%2C%20por%20correo%20electr%C3%B3nico.)
+- :link:[Catalogo de modelos LLM en Huggingface:](https://huggingface.co/models)
 - :link:[Referencia del modelo Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
 - :link:[Referencia del modelo CodeLlama-7B-Instruct](https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF)
-
 
 
 
